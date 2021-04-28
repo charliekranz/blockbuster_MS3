@@ -5,3 +5,10 @@
 .nav-text {
     color: #4a148c;
 }
+
+.flashed h5 {
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: #aa00ff ;
+}
