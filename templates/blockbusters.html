@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blockbusters</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+   <h2>Extension of base template</h2>
+
     {% for story in stories %}
         {{ story.title_name }}<br>
         {{ story.genre_name }}<br>
         {{ story.storyblocks_chosen }}<br>
         {{ story.cast_chosen }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
