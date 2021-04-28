@@ -7,6 +7,7 @@ heroku
 materialise
 jquery
 fontawesome
+werkzeug
 
 Rememmber to turn Debug to false
 
