@@ -2,11 +2,11 @@
 {% block content %}
 
     <h4 class="center-align title-purple">
-        <i class="fas fa-user-plus fa-sm"></i> Register
+        <i class="fas fa-sign-in-alt fa-sm"></i> Login
     </h4>
 
     <div class="row">
-        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
+        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel purple lighten-5">
                  <!-- username -->
                 <div class="row">
@@ -26,22 +26,21 @@
                         <label for="password">Password</label>
                     </div>
                  </div>
-                 <!-- regsiter -->
+                 <!-- login -->
                 <div class="row">
                     <button type="submit" class="col s12 btn-large purple darken-4 text-shadow">
-                        Register <i class="fa fa-share-square"></i>
+                        Login <i class="fa fa-sign-in-alt"></i>
                     </button>
                 </div>
             </div>
         </form>
     </div>
 
-
     <div class="row">
         <div class="col s12">
             <p class="center-align">
-                Already Registered? 
-                <a href="{{ url_for('login') }}" class="purple-text">Login Now</a> 
+                Haven’t Registered? 
+                <a href="{{ url_for('register') }}" class="purple-text">Register Now</a> 
             </p>
         </div>
     </div>
