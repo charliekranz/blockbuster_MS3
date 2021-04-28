@@ -2,8 +2,11 @@
 
 RandomKeygen for random [https://randomkeygen.com/]
 
-
-
+mongoDB
+heroku
+materialise
+jquery
+fontawesome
 
 Rememmber to turn Debug to false
 
