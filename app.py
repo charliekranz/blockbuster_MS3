@@ -111,7 +111,7 @@ def add_story():
             "setting_name": request.form.get("setting_name"),
             "created_by":  session["user"]
         }
-        mongo.db.tasks.insert_one(story)
+        mongo.db.stories.insert_one(story)
         flash("Block+Buster Built!")
         return redirect(url_for("get_stories"))
 
