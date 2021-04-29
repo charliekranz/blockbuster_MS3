@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_stories")
 def get_stories():
-    stories = mongo.db.stories.find()
+    stories = list(mongo.db.stories.find())
     return render_template("blockbusters.html", stories=stories)
 
 

@@ -9,18 +9,28 @@
     {% endfor %}
 
     <ul class="collapsible">
+        {% for story in stories %}
         <li>
-        <div class="collapsible-header white-text purple darken-1">First &nbsp;<i class="fas fa-ticket-alt"></i></div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header white-text purple purple accent-3">
+                <strong><h5 class="bb-title">
+                    {{ story.title_name }}&nbsp;<i class="fas fa-ticket-alt"></i>
+                </h5></strong>
+            </div>
+            <div class="collapsible-body">
+                <div class="col s12 m6 l6"> 
+                    <strong><em><h6 class="genre-text">
+                        {{ story.genre_name }}</h6></br>
+                        <p>{ story.storyblocks_chosen }}</p>{<br>
+                    </em></strong>
+                </div>
+                <div class="col s12 m6 l6"> 
+                    <strong><em>
+                        {{ story.cast_chosen }}
+                    </em></strong>
+                </div>
+            </div>
         </li>
-        <li>
-        <div class="collapsible-header white-text purple darken-1">First &nbsp;<i class="fas fa-ticket-alt"></i></div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-        <div class="collapsible-header white-text purple darken-1">First &nbsp;<i class="fas fa-ticket-alt"></i></div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 
