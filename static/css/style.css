@@ -29,6 +29,7 @@
 
 .genre-text {
     text-transform: uppercase;
+    text-decoration-line: underline;
 }
 
 .footer-content {
