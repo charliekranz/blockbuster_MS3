@@ -4,13 +4,14 @@
     <h4 class="center-align purple-text text-darken-4">
         <i class="fas fa-video"></i> Build a Block+Buster
     </h4>
-
+    <!-- story -->
     <div class="row card-panel purple lighten-5">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_story') }}">
                  <h5><i class="fas fa-puzzle-piece prefix purple-text darken-4"></i>
                  Build the Story</h5>
             <div class="row">
-                <div class="input-field col s12 ">
+                 <!-- character -->
+                <div class="input-field col s12">
                     <select id="character_name" name="character_name" class="validate" required>
                         <option value="" disabled selected>Character/s</option>
                             {% for character in characters %}
@@ -18,6 +19,7 @@
                             {% endfor %}
                     </select>
                 </div>
+                <!-- plot -->
                 <div class="input-field col s12 ">
                      <select id="plot_name" name="plot_name" class="validate" required>
                          <option value="" disabled selected>Plot</option>
@@ -26,6 +28,7 @@
                             {% endfor %}
                     </select>
                 </div>
+                <!-- resolution -->
                  <div class="input-field col s12 ">
                      <select id="resolution_name" name="resolution_name" class="validate" required>
                          <option value="" disabled selected>Resolution</option>
@@ -34,6 +37,7 @@
                             {% endfor %}
                     </select>
                 </div>
+                <!-- setting -->
                  <div class="input-field col s12 ">
                      <select id="setting_name" name="setting_name" class="validate" required>
                          <option value="" disabled selected>Setting</option>
@@ -43,6 +47,7 @@
                     </select>
                 </div>
             </div>
+            <!-- title-->
             <div class="row">
                 <div class="col m8 s12">
                 <h5><i class="fas fa-ticket-alt purple-text darken-4"></i>
@@ -51,6 +56,7 @@
                         maxlength="80" type="text" class=" input-field validate" required>
                     <!--<label for="title_name">Title of Block+Buster</label>-->
                 </div>
+                <!-- genre -->
                 <div class="input-field col m4 s12">
                     <h5><i class="fas fa-theater-masks purple-text darken-4"></i> 
                         Choose a Genre</h5>
@@ -65,13 +71,13 @@
                     </div>
                 </div>
             </div>
+            <!-- cast -->
             <div class="row">
                 <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
                     Select the Cast</h5>
                 <div class="input-field row">
                     
                 </div>
-
                 <p>
                     <label>
                         <input name="group1" type="radio" checked />
@@ -79,6 +85,14 @@
                     </label>
                 </p>
 
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col-s12 center-align">
+                    <button type="submit" class="btn-large purple accent-3 darken-4">
+                        <i class="fas fa-video"></i> Publish
+                    </button>
+                </div>
             </div>
         </form>
     </div>

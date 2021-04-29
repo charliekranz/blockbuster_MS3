@@ -99,8 +99,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_story")
+@app.route("/add_stories", methods=["GET", "POST"])
 def add_story():
+    if request.method == "POST":
+        story = {
+            "title_name": request.form.get("title_name"),
+            "genre_name": request.form.get("genre_name"),
+            "character_name": request.form.get("character_name"),
+            "plot_name": request.form.get("plot_name"),
+            "resolution_name": request.form.get("resolution_name"),
+            "setting_name": request.form.get("setting_name"),
+            "created_by":  session["user"]
+        }
+        mongo.db.tasks.insert_one(story)
+        flash("Block+Buster Built!")
+        return redirect(url_for("get_stories"))
+
     characters = mongo.db.character.find().sort("character_name", 1)
     plots = mongo.db.plot.find().sort("plot_name", 1)
     resolutions = mongo.db.resolution.find().sort("resolution_name", 1)
