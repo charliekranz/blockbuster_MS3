@@ -1,3 +1,5 @@
+
+
 .text-shadow {
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65)
 }
@@ -11,4 +13,16 @@
     text-transform: uppercase;
     letter-spacing: 0.5em;
     color: #aa00ff ;
+}
+
+.border-solid {
+    border-style: solid;
+    border-color:#aa00ff;
+    border-width: 0.1em;
+    line-height: 2em;
+}
+
+.footer-content {
+    height: 100vh;
+    background-color: #4a148c;
 }
