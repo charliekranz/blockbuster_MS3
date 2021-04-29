@@ -7,9 +7,9 @@
 
     <div class="row card-panel purple lighten-5">
         <form class="col s12" method="POST" action="">
+                 <h5><i class="fas fa-puzzle-piece prefix purple-text darken-4"></i>
+                 Build the Story</h5>
             <div class="row">
-                <i class="fas fa-puzzle-piece prefix purple-text darken-4"></i>
-                    Build the Story
                 <div class="input-field col s12 ">
                     <select id="character_name" name="character_name" class="validate" required>
                         <option value="" disabled selected>Character/s</option>
@@ -44,29 +44,32 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col m8 s12">
-                    <i class="fas fa-ticket-alt prefix purple-text darken-4"></i>
+                <div class="col m8 s12">
+                <h5><i class="fas fa-ticket-alt purple-text darken-4"></i>
+                    Write the Title</h5>
                         <input id="title_name" name="title_name" minlength="3"
-                        maxlength="80" type="text" class="validate" required>
-                    <label for="title_name">Title of Block+Buster</label>
+                        maxlength="80" type="text" class=" input-field validate" required>
+                    <!--<label for="title_name">Title of Block+Buster</label>-->
                 </div>
                 <div class="input-field col m4 s12">
+                    <h5><i class="fas fa-theater-masks purple-text darken-4"></i> 
+                        Choose a Genre</h5>
                     <div class="input-field">
-                        <i class="fas fa-theater-masks prefix purple-text darken-4"></i> 
                             <select id="genre_name" name="genre_name" class="validate" required>
                                 <option value="" disabled selected>Genre</option>
                                 {% for genre in genres %}
                                     <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
                                 {% endfor %}
                             </select>
-                         <!-- <label for="genre_name">Pick a Genre </label> -->
+                         <!-- <label for="genre_name">Pick a Genre </label> */ -->
                     </div>
                 </div>
             </div>
             <div class="row">
+                <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
+                    Select the Cast</h5>
                 <div class="input-field row">
-                    <i class="fas fa-users prefix purple-text darken-4"></i> 
-                    Select a Cast
+                    
                 </div>
 
                 <p>
