@@ -13,7 +13,7 @@
                  <!-- character -->
                 <div class="input-field col s12">
                     <select id="character_name" name="character_name" class="validate" required>
-                        <option value="" disabled selected>Character/s</option>
+                        <option value="" disabled selected>Choose Character/s</option>
                             {% for character in characters %}
                                  <option value="{{ character.character_name }}">{{ character.character_name }}</option>
                             {% endfor %}
@@ -22,7 +22,7 @@
                 <!-- plot -->
                 <div class="input-field col s12 ">
                      <select id="plot_name" name="plot_name" class="validate" required>
-                         <option value="" disabled selected>Plot</option>
+                         <option value="" disabled selected>Pick Plot</option>
                             {% for plot in plots %}
                                  <option value="{{ plot.plot_name }}">{{ plot.plot_name }}</option>
                             {% endfor %}
@@ -31,7 +31,7 @@
                 <!-- resolution -->
                  <div class="input-field col s12 ">
                      <select id="resolution_name" name="resolution_name" class="validate" required>
-                         <option value="" disabled selected>Resolution</option>
+                         <option value="" disabled selected>Choose Resolution</option>
                             {% for resolution in resolutions %}
                                  <option value="{{ resolution.resolution_name }}">{{ resolution.resolution_name }}</option>
                             {% endfor %}
@@ -40,7 +40,7 @@
                 <!-- setting -->
                  <div class="input-field col s12 ">
                      <select id="setting_name" name="setting_name" class="validate" required>
-                         <option value="" disabled selected>Setting</option>
+                         <option value="" disabled selected>Select Setting</option>
                             {% for setting in settings %}
                                  <option value="{{ setting.setting_name }}">{{ setting.setting_name }}</option>
                             {% endfor %}

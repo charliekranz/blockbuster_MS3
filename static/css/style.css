@@ -32,6 +32,14 @@
     text-decoration-line: underline;
 }
 
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    color: #4a148c;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
 .footer-content {
     height: 100vh;
     background-color: #4a148c;
