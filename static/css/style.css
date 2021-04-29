@@ -23,8 +23,17 @@
 }
 
 .bb-title {
-    text-align: center;
     text-transform: uppercase;
+    font-size: 1.75em;
+}
+
+.btn-small {
+    margin:4px;
+}
+
+.collapsible-header .col .strong {
+    margin: 4px;
+    line-height: 40px;
 }
 
 .genre-text {
