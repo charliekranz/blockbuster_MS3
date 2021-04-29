@@ -101,8 +101,12 @@ def logout():
 
 @app.route("/add_story")
 def add_story():
-    genres = mongo.db.genres.find().sort("category_name", 1)
-    return render_template("build.html", genres=genres)
+    characters = mongo.db.character.find().sort("character_name", 1)
+    plots = mongo.db.plot.find().sort("plot_name", 1)
+    resolutions = mongo.db.resolution.find().sort("resolution_name", 1)
+    settings = mongo.db.setting.find().sort("setting_name", 1)
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    return render_template("build.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings)
 
 
 if __name__ == "__main__":
