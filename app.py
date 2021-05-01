@@ -88,7 +88,7 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username)
 
-    return redirect(url_for('login.html'))
+    return redirect(url_for('login'))
 
 
 @app.route("/logout")
@@ -99,7 +99,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_stories", methods=["GET", "POST"])
+@app.route("/add_story", methods=["GET", "POST"])
 def add_story():
     if request.method == "POST":
         story = {
