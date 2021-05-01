@@ -151,6 +151,13 @@ def edit_story(story_id):
     return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
 
 
+@app.route("/delete_story/<story_id>")
+def delete_story(story_id):
+    mongo.db.stories.remove({"_id": ObjectId(story_id)})
+    flash("Block+Buster Deleted")
+    return redirect(url_for("get_stories"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -132,21 +132,22 @@
 
 
 
-            <!-- submit button -->
+            <!-- buttons -->
             <div class="row">
-                <div class="col-s8 center-align">
+                <div class="col-s12 center-align">
                     <!-- cancel button -->
                     <a href="{{ url_for('get_stories') }}" class="btn-large grey">
                         <i class="fas fa-undo"></i> Cancel Changes 
                     </a>
+            <!-- submit button -->
                     <button type="submit" class="btn-large purple accent-3 darken-4">
                         <i class="fas fa-video"></i> Update
                     </button>
                 </div>
-                 <div class="col-s4 center-align">
-                    <button type="submit" class="btn-large red accent-3 darken-4">
+            <!-- delete button -->
+                 <div class="col-s12 center-align">
+                    <a href="{{ url_for('delete_story', story_id=story._id) }}" class="btn-large red accent-3 darken-4">
                         <i class="fas fa-trash-alt"></i> Delete
-                    </button>
                 </div>
             </div>
         </form>
