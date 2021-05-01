@@ -121,7 +121,7 @@ def add_story():
     resolutions = mongo.db.resolution.find().sort("resolution_name", 1)
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
-    casts = mongo.db.cast.find().sort("cast_name")
+    casts = mongo.db.cast.find().sort("cast_name", 1)
     return render_template("add_story.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
 
 
@@ -134,7 +134,7 @@ def edit_story(story_id):
     resolutions = mongo.db.resolution.find().sort("resolution_name", 1)
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
-    casts = mongo.db.cast.find().sort("cast_name")
+    casts = mongo.db.cast.find().sort("cast_name", 1)
     return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
 
 

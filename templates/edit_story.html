@@ -13,36 +13,50 @@
                  <!-- character -->
                 <div class="input-field col l3 m6 s12">
                     <select id="character_name" name="character_name" class="validate" required>
-                        <option value="" disabled selected>Choose Character/s</option>
+                        <option value="" disabled>Choose Character/s</option>
                             {% for character in characters %}
-                                 <option value="{{ character.character_name }}">{{ character.character_name }}</option>
+                                {% if character.character_name == story.character_name %}
+                                     <option value="{{ character.character_name }}" selected>{{ character.character_name }}</option>
+                                {% else %}
+                                    <option value="{{ character.character_name }}">{{ character.character_name }}</option>
+                                 {% endif %}
                             {% endfor %}
                     </select>
                 </div>
                 <!-- plot -->
                 <div class="input-field col l3 m6 s12">
                      <select id="plot_name" name="plot_name" class="validate" required>
-                         <option value="" disabled selected>Pick Plot</option>
+                         <option value="" disabled>Pick Plot</option>
                             {% for plot in plots %}
-                                 <option value="{{ plot.plot_name }}">{{ plot.plot_name }}</option>
+                                {% if plot.plot_name == story.plot_name %}
+                                     <option value="{{ plot.plot_name }}" selected>{{ plot.plot_name }}</option>
+                                {% else %}
+                                    <option value="{{ plot.plot_name }}">{{ plot.plot_name }}</option>
+                                {% endif %}
                             {% endfor %}
                     </select>
                 </div>
                 <!-- resolution -->
                  <div class="input-field col l3 m6 s12">
                      <select id="resolution_name" name="resolution_name" class="validate" required>
-                         <option value="" disabled selected>Choose Resolution</option>
+                         <option value="" disabled>Choose Resolution</option>
                             {% for resolution in resolutions %}
-                                 <option value="{{ resolution.resolution_name }}">{{ resolution.resolution_name }}</option>
+                                 <option value="{{ resolution.resolution_name }}" selected >{{ resolution.resolution_name }}</option>
+                                {% if resolution.resolution_name == story.resolution_name %}
+                                    <option value="{{ resolution.resolution_name }}">{{ resolution.resolution_name }}</option>
+                                 {% endif %}
                             {% endfor %}
                     </select>
                 </div>
                 <!-- setting -->
                  <div class="input-field col l3 m6 s12">
                      <select id="setting_name" name="setting_name" class="validate" required>
-                         <option value="" disabled selected>Select Setting</option>
+                         <option value="" disabled>Select Setting</option>
                             {% for setting in settings %}
-                                 <option value="{{ setting.setting_name }}">{{ setting.setting_name }}</option>
+                                    <option value="{{ setting.setting_name }}" selected>{{ setting.setting_name }}</option>
+                                {% if setting.setting_name == story.setting_name %}
+                                    <option value="{{ setting.setting_name }}">{{ setting.setting_name }}</option>
+                                 {% endif %} 
                             {% endfor %}
                     </select>
                 </div>
@@ -53,7 +67,7 @@
                 <h5><i class="fas fa-ticket-alt purple-text darken-4"></i>
                     Write the Title</h5>
                         <input id="title_name" name="title_name" minlength="3"
-                        maxlength="80" type="text" class=" input-field validate" required>
+                        maxlength="80" value="{{ story.title_name }}" type="text" class=" input-field validate" required>
                     <!--<label for="title_name">Title of Block+Buster</label>-->
                 </div>
                 <!-- genre -->
@@ -62,9 +76,12 @@
                         Choose a Genre</h5>
                     <div class="input-field">
                             <select id="genre_name" name="genre_name" class="validate" required>
-                                <option value="" disabled selected>Genre</option>
+                                <option value="" disabled>Genre</option>
                                 {% for genre in genres %}
-                                    <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                                    <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option> 
+                                    {% if genre.genre_name == story.genre_name %}
+                                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                                    {% endif %}
                                 {% endfor %}
                             </select>
                          <!-- <label for="genre_name">Pick a Genre </label> */ -->
@@ -79,9 +96,12 @@
                 <div class="input-field col-12">
                         <div class="input-field">
                                 <select icons multiple id="cast_name" name="cast_name" class="validate" required>
-                                    <option value="" disabled selected>Cast</option>
+                                    <option value="" disabled>Cast</option>
                                     {% for cast in casts %}
-                                        <option value="{{ cast.cast_name }}" data-icon="/images/charlize-theron.jpg" class="left">{{ cast.cast_name }}</option>
+                                            <option value="{{ cast.cast_name }}" data-icon="/images/charlize-theron.jpg" class="left" selected>{{ cast.cast_name }}</option>
+                                        {% if cast.cast_name == story.cast_name %}
+                                            <option value="{{ cast.cast_name }}" data-icon="/images/charlize-theron.jpg" class="left">{{ cast.cast_name }}</option>
+                                        {% endif %}
                                     {% endfor %}
                                 </select>
                             <!-- <label for="genre_name">Pick a Genre </label> */ -->
@@ -114,9 +134,18 @@
 
             <!-- submit button -->
             <div class="row">
-                <div class="col-s12 center-align">
+                <div class="col-s8 center-align">
+                    <!-- cancel button -->
+                    <a href="{{ url_for('get_stories') }}" class="btn-large grey">
+                        <i class="fas fa-undo"></i> Cancel Changes 
+                    </a>
                     <button type="submit" class="btn-large purple accent-3 darken-4">
                         <i class="fas fa-video"></i> Update
+                    </button>
+                </div>
+                 <div class="col-s4 center-align">
+                    <button type="submit" class="btn-large red accent-3 darken-4">
+                        <i class="fas fa-trash-alt"></i> Delete
                     </button>
                 </div>
             </div>
