@@ -127,6 +127,19 @@ def add_story():
 
 @app.route("/edit_story/<story_id>/", methods=["GET", "POST"])
 def edit_story(story_id):
+    if request.method == "POST":
+        submit = {
+            "title_name": request.form.get("title_name"),
+            "genre_name": request.form.get("genre_name"),
+            "character_name": request.form.get("character_name"),
+            "plot_name": request.form.get("plot_name"),
+            "resolution_name": request.form.get("resolution_name"),
+            "setting_name": request.form.get("setting_name"),
+            "cast_name": request.form.get("cast_name"),
+            "created_by":  session["user"]
+        }
+        mongo.db.stories.update({"_id": ObjectId(story_id)}, submit)
+        flash("Block+Buster Updated!")
     story = mongo.db.stories.find_one({"_id": ObjectId(story_id)})
 
     characters = mongo.db.character.find().sort("character_name", 1)
