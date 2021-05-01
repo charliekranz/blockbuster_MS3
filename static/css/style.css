@@ -8,6 +8,14 @@
     color: #4a148c;
 }
 
+/*.nav ul a {
+    color: #4a148c;
+}*/
+
+.nav {
+  background-color: #ffffff !important;
+}
+
 .flashed h5 {
     line-height: 2;
     text-transform: uppercase;

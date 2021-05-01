@@ -109,7 +109,6 @@ def add_story():
             "plot_name": request.form.get("plot_name"),
             "resolution_name": request.form.get("resolution_name"),
             "setting_name": request.form.get("setting_name"),
-            "cast_name": request.form.get("cast_name"),
             "created_by":  session["user"]
         }
         mongo.db.stories.insert_one(story)
@@ -121,8 +120,7 @@ def add_story():
     resolutions = mongo.db.resolution.find().sort("resolution_name", 1)
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
-    casts = mongo.db.cast.find().sort("cast_name", 1)
-    return render_template("build.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
+    return render_template("build.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings)
 
 
 if __name__ == "__main__":
