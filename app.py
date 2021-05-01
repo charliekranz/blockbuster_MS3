@@ -121,8 +121,21 @@ def add_story():
     resolutions = mongo.db.resolution.find().sort("resolution_name", 1)
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
-    casts = mongo.db.cast.find().sort("cast_name", 1)
-    return render_template("build.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
+    casts = mongo.db.cast.find().sort("cast_name")
+    return render_template("add_story.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
+
+
+@app.route("/edit_story/<story_id>/", methods=["GET", "POST"])
+def edit_story(story_id):
+    story = mongo.db.stories.find_one({"_id": ObjectId(story_id)})
+
+    characters = mongo.db.character.find().sort("character_name", 1)
+    plots = mongo.db.plot.find().sort("plot_name", 1)
+    resolutions = mongo.db.resolution.find().sort("resolution_name", 1)
+    settings = mongo.db.setting.find().sort("setting_name", 1)
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    casts = mongo.db.cast.find().sort("cast_name")
+    return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
 
 
 if __name__ == "__main__":

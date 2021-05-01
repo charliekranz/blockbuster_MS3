@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h4 class="center-align purple-text text-darken-4">
+        <i class="fas fa-video"></i> Edit Block+Buster
+    </h4>
+    <!-- story -->
+    <div class="row card-panel purple lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('edit_story', story_id=story._id) }}">
+                 <h5><i class="fas fa-puzzle-piece prefix purple-text darken-4"></i>
+                 Build the Story</h5>
+            <div class="row">
+                 <!-- character -->
+                <div class="input-field col l3 m6 s12">
+                    <select id="character_name" name="character_name" class="validate" required>
+                        <option value="" disabled selected>Choose Character/s</option>
+                            {% for character in characters %}
+                                 <option value="{{ character.character_name }}">{{ character.character_name }}</option>
+                            {% endfor %}
+                    </select>
+                </div>
+                <!-- plot -->
+                <div class="input-field col l3 m6 s12">
+                     <select id="plot_name" name="plot_name" class="validate" required>
+                         <option value="" disabled selected>Pick Plot</option>
+                            {% for plot in plots %}
+                                 <option value="{{ plot.plot_name }}">{{ plot.plot_name }}</option>
+                            {% endfor %}
+                    </select>
+                </div>
+                <!-- resolution -->
+                 <div class="input-field col l3 m6 s12">
+                     <select id="resolution_name" name="resolution_name" class="validate" required>
+                         <option value="" disabled selected>Choose Resolution</option>
+                            {% for resolution in resolutions %}
+                                 <option value="{{ resolution.resolution_name }}">{{ resolution.resolution_name }}</option>
+                            {% endfor %}
+                    </select>
+                </div>
+                <!-- setting -->
+                 <div class="input-field col l3 m6 s12">
+                     <select id="setting_name" name="setting_name" class="validate" required>
+                         <option value="" disabled selected>Select Setting</option>
+                            {% for setting in settings %}
+                                 <option value="{{ setting.setting_name }}">{{ setting.setting_name }}</option>
+                            {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <!-- title-->
+            <div class="row">
+                <div class="col m8 s12">
+                <h5><i class="fas fa-ticket-alt purple-text darken-4"></i>
+                    Write the Title</h5>
+                        <input id="title_name" name="title_name" minlength="3"
+                        maxlength="80" type="text" class=" input-field validate" required>
+                    <!--<label for="title_name">Title of Block+Buster</label>-->
+                </div>
+                <!-- genre -->
+                <div class="input-field col m4 s12">
+                    <h5><i class="fas fa-theater-masks purple-text darken-4"></i> 
+                        Choose a Genre</h5>
+                    <div class="input-field">
+                            <select id="genre_name" name="genre_name" class="validate" required>
+                                <option value="" disabled selected>Genre</option>
+                                {% for genre in genres %}
+                                    <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                                {% endfor %}
+                            </select>
+                         <!-- <label for="genre_name">Pick a Genre </label> */ -->
+                    </div>
+                </div>
+            </div>
+            <!-- cast -->
+
+            <div class="row">
+               <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
+                        Select the Cast</h5>
+                <div class="input-field col-12">
+                        <div class="input-field">
+                                <select icons multiple id="cast_name" name="cast_name" class="validate" required>
+                                    <option value="" disabled selected>Cast</option>
+                                    {% for cast in casts %}
+                                        <option value="{{ cast.cast_name }}" data-icon="/images/charlize-theron.jpg" class="left">{{ cast.cast_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            <!-- <label for="genre_name">Pick a Genre </label> */ -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--<div class="row">
+                <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
+                    Select the Cast</h5>
+                <div class="input-field">
+                <p>
+                    <label>
+                        <input id="cast_name" name="cast_name" type="radio" class="validate" required>
+                        <span>
+                            {% for cast in casts %}
+                                    <option value="{{ cast.cast_name }}">{{ cast.cast_name }}</option>
+                                {% endfor %}
+                        </span>
+                        </input>
+                        </label>
+                    </label>
+                </p>
+            </div>
+            </div>-->
+
+
+
+            <!-- submit button -->
+            <div class="row">
+                <div class="col-s12 center-align">
+                    <button type="submit" class="btn-large purple accent-3 darken-4">
+                        <i class="fas fa-video"></i> Update
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+{% endblock %}
