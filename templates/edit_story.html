@@ -134,8 +134,12 @@
 
             <!-- buttons -->
             <div class="row">
+            <!-- delete button -->
                 <div class="col-s12 center-align">
-                    <!-- cancel button -->
+                    <a href="{{ url_for('delete_story', story_id=story._id) }}" class="btn-large red accent-3 darken-4">
+                         <i class="fas fa-trash-alt"></i> Delete
+                     </a>
+            <!-- cancel button -->
                     <a href="{{ url_for('get_stories') }}" class="btn-large grey">
                         <i class="fas fa-undo"></i> Cancel Changes 
                     </a>
@@ -143,14 +147,6 @@
                     <button type="submit" class="btn-large purple accent-3 darken-4">
                         <i class="fas fa-video"></i> Update
                     </button>
-                </div>
-            <!-- delete button -->
-                <div class="row">
-                    <div class="col-s12 center-align">
-                        <a href="{{ url_for('delete_story', story_id=story._id) }}" class="btn-large red accent-3 darken-4">
-                            <i class="fas fa-trash-alt"></i> Delete
-                        </a>
-                    </div>
                 </div>
             </div>
         </form>
