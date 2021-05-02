@@ -13,7 +13,16 @@ Rememmber to turn Debug to false
 
 
 
+images
 
+Charlize Theron - https://en.wikipedia.org/wiki/Charlize_Theron#/media/File:Charlize-theron-IMG_6045.jpg
+Judi Dench - https://en.wikipedia.org/wiki/Judi_Dench#/media/File:Judi_Dench_at_the_BAFTAs_2007_(cropped).jpg
+Tilda Swinton - https://en.wikipedia.org/wiki/Tilda_Swinton#/media/File:Tilda_Swinton_by_Gage_Skidmore_(cropped).jpg
+Dwayne - Johnson - https://en.wikipedia.org/wiki/Dwayne_Johnson#/media/File:Dwayne_Johnson_Hercules_2014_(cropped).jpg
+Jackie Chan - https://upload.wikimedia.org/wikipedia/commons/8/8b/Jackie_Chan_July_2016.jpg
+Will Smith - https://en.wikipedia.org/wiki/Will_Smith#/media/File:TechCrunch_Disrupt_2019_(48834434641)_(cropped).jpg
+Lin-Manuel Miranda - https://en.wikipedia.org/wiki/Lin-Manuel_Miranda#/media/File:Lin-Manuel_Miranda_by_Gage_Skidmore.jpg
+Samuel L. Jackson - https://en.wikipedia.org/wiki/Samuel_L._Jackson#/media/File:Samuel_L._Jackson_2019_by_Glenn_Francis.jpg
 
 
 

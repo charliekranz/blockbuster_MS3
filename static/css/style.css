@@ -50,6 +50,10 @@
     text-decoration-line: underline;
 }
 
+.cast-name {
+    line-height: 16px;
+}
+
 .dropdown-content li>a, .dropdown-content li>span {
     font-size: 16px;
     color: #4a148c;
