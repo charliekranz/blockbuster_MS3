@@ -6,6 +6,8 @@ $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
     $("select").formSelect();
+    $('.materialboxed').materialbox();
+
  
     /* Dropdown Validation code from Code Institute Task Master Project */
     validateMaterializeSelect();
