@@ -25,6 +25,13 @@ def get_stories():
     return render_template("blockbusters.html", stories=stories)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    stories = list(mongo.db.stories.find({"$text": {"$search": query}}))
+    return render_template("blockbusters.html", stories=stories)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
