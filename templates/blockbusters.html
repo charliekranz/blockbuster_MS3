@@ -21,18 +21,20 @@
                  </div>
             </div>
             <div class="row collapsible-body  purple lighten-5">
-                <div class="col m8 s12"> 
+                <div class="col m9 s12"> 
                     <strong><em><h6 class="genre-text purple-text"></em>
                         {{ story.genre_name }}</h6></br>
                         <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }}  {{ story.setting_name }} </h5> 
                     </strong>
                      <p><em>by: {{ story.created_by }}</em></p>
                 </div>
-                <div class="col m4 s12"> 
+                <div class="col m3 s12"> 
                     <strong><em>
-                        <p>Featured Cast:</p>
+                        <p>Featured Cast:</p></em>
+                         <img class="materialboxed" width="100%" src="static/will-smith.jpg">
                          {{ story.cast_name }}
-                    </em></strong>
+                         {{ story.cast_url }}
+                    </strong>
                 </div>
             </div>
         </li>
