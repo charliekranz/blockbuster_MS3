@@ -1,4 +1,11 @@
+h1, h2 {
+    font-family: 'Anton', sans-serif;
+}
 
+.marker-text {
+    font-family: 'Nanum Pen Script', cursive;
+    line-height: 0.75em;
+}
 
 .text-shadow {
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65)
@@ -53,6 +60,8 @@ hr.purple-light {
     text-transform: uppercase;
     font-size: 1.75em;
     text-align: center;
+    font-family: 'Anton', sans-serif;
+
 }
 
 .box-text {
