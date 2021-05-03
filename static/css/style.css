@@ -7,6 +7,12 @@ h1, h2 {
     line-height: 0.75em;
 }
 
+.mono {
+    font-family: 'PT Mono', monospace;
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+
 .text-shadow {
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65)
 }
