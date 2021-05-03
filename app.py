@@ -145,6 +145,7 @@ def edit_story(story_id):
             "resolution_name": request.form.get("resolution_name"),
             "setting_name": request.form.get("setting_name"),
             "cast_name": request.form.get("cast_name"),
+            "cast_url": request.form.get("cast_url"),
             "created_by":  session["user"]
         }
         mongo.db.stories.update({"_id": ObjectId(story_id)}, submit)
@@ -157,7 +158,8 @@ def edit_story(story_id):
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
     casts = mongo.db.cast.find().sort("cast_name", 1)
-    return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
+    casturls = mongo.db.casturl.find().sort("cast_url", 1)
+    return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts, casturls=casturls)
 
 
 @app.route("/delete_story/<story_id>")
