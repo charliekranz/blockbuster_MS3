@@ -56,13 +56,35 @@
                 </div>
 
             <div class="div col m6 s12">
-                <div class="card-panel purple accent-1">
-                    Browse
+                <div class="card-panel purple darken-1">
+                 <h4 class="bb-title center-align white-text"><i class="fas fa-film fa-lg icon-space"></i></br>
+                    Browse the Block+Busters</h4>
+                    <p class="center-align white-text">
+                        View the Collection
+                    </p>
+                    <div class="row">
+                        <div class="col-s12 center-align">
+                            <a href="{{ url_for('get_stories') }}" class="btn-large purple accent-3 darken-4">
+                                <i class="fas fa-film"></i> Browse
+                            </a>
+                        </div>
+                    </div>                  
                 </div>
             </div>
             <div class="div col m6 s12">
-                <div class="card-panel purple accent-1">
-                    Build
+                <div class="card-panel purple darken-1">
+                 <h4 class="bb-title center-align white-text"><i class="fas fa-video fa-lg icon-space"></i></br>
+                    Build A Block+Buster</h4>
+                    <p class="center-align white-text">
+                    Create Your Own
+                    </p>
+                    <div class="row">
+                        <div class="col-s12 center-align">
+                            <a href="{{ url_for('add_story') }}" class="btn-large purple accent-3 darken-4">
+                                <i class="fas fa-video"></i> Build
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

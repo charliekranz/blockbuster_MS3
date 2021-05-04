@@ -55,6 +55,10 @@ hr.purple-light {
     color: #aa00ff ;
 }
 
+.icon-space {
+    padding-bottom: 0.5em;
+}
+
 .border-solid {
     border-style: solid;
     border-color:#aa00ff;
