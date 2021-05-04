@@ -23,6 +23,11 @@ def home():
     return render_template("home.html")
 
 @app.route("/")
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/")
 @app.route("/get_stories")
 def get_stories():
     stories = list(mongo.db.stories.find())
