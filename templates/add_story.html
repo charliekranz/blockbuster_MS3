@@ -81,7 +81,6 @@
                         <div class="col s4 m3 l2">
                         <label class ="cast_url">
                             <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
-                            <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden"  multiple/>
                         </label>
                             <p> 
                                 <label class="cast-name">
@@ -89,6 +88,9 @@
                                     <span>{{ cast.cast_name }}</span>
                                 </label>
                             </p>
+                             <label class="cast-url"></label>
+                                <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden"  multiple/>
+                            </label>
                         </div>
                     {% endfor %}
             </div>

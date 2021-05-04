@@ -139,7 +139,7 @@ def add_story():
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
     casts = mongo.db.cast.find().sort("cast_name", 1)
-    casturls = mongo.db.cast.find().sort("cast_url[]", 1)
+    casturls = mongo.db.cast.find().sort("cast_url", 1)
     return render_template("add_story.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts, casturls=casturls)
 
 
