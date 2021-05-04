@@ -78,11 +78,12 @@
                     <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
                         Select the Cast</h5>
                  {% for cast in casts %}
-                <div class="col s4 m3 l2">
-                     <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
+                 <div class="col s4 m3 l2">
+                    <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
+                    <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple />
                     <p> 
                         <label class="cast-name">
-                            <input value="{{ cast.cast_name }}" name="cast_name" id="cast_name" type="radio" />
+                            <input value="{{ cast.cast_name }}" name="cast_name" id="cast_name" type="radio" multiple />
                             <span>{{ cast.cast_name }}</span>
                         </label>
                     </p>
