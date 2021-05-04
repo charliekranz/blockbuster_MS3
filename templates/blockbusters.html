@@ -57,7 +57,14 @@
         {% endfor %}
     </ul>
     {% else %}
-    <h4 class="purple-text text-darken-4 center-align"><i class="fas fa-comment-slash"></i> No Block+Busters Found</h3>
+    <div class="row card-panel purple lighten-5">
+    <h4 class="purple-text text-darken-4 center-align"><i class="fas fa-comment-slash"></i> 
+        No Block+Busters Found
+    </h3>
+    <p class="purple-text text-darken-4 center-align">
+        Try another search.
+    </p>
+    </div>
     {% endif %}
 
 {% endblock %}
