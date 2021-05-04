@@ -41,10 +41,11 @@
                      <select id="resolution_name" name="resolution_name" class="validate" required>
                          <option value="" disabled>Choose Resolution</option>
                             {% for resolution in resolutions %}
-                                 <option value="{{ resolution.resolution_name }}" selected >{{ resolution.resolution_name }}</option>
                                 {% if resolution.resolution_name == story.resolution_name %}
-                                    <option value="{{ resolution.resolution_name }}">{{ resolution.resolution_name }}</option>
-                                 {% endif %}
+                                 <option value="{{ resolution.resolution_name }}" selected >{{ resolution.resolution_name }}</option>
+                                {% else %}
+                                <option value="{{ resolution.resolution_name }}">{{ resolution.resolution_name }}</option>
+                                {% endif %}
                             {% endfor %}
                     </select>
                 </div>
@@ -53,10 +54,11 @@
                      <select id="setting_name" name="setting_name" class="validate" required>
                          <option value="" disabled>Select Setting</option>
                             {% for setting in settings %}
-                                    <option value="{{ setting.setting_name }}" selected>{{ setting.setting_name }}</option>
                                 {% if setting.setting_name == story.setting_name %}
-                                    <option value="{{ setting.setting_name }}">{{ setting.setting_name }}</option>
-                                 {% endif %} 
+                                <option value="{{ setting.setting_name }}" selected>{{ setting.setting_name }}</option>
+                                {% else %}
+                                 <option value="{{ setting.setting_name }}">{{ setting.setting_name }}</option>
+                                {% endif %} 
                             {% endfor %}
                     </select>
                 </div>
