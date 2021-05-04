@@ -75,6 +75,7 @@
                 <div class="card-panel purple darken-1">
                  <h4 class="bb-title center-align white-text"><i class="fas fa-video fa-lg icon-space"></i></br>
                     Build A Block+Buster</h4>
+                    {% if session.user %}
                     <p class="center-align white-text">
                     Create Your Own
                     </p>
@@ -85,6 +86,21 @@
                             </a>
                         </div>
                     </div>
+                    {% else %}
+                    <p class="center-align white-text">
+                    Login or Register to Create Your Own
+                    </p>
+                    <div class="row">
+                        <div class="col-s12 center-align">
+                            <a href="{{ url_for('login') }}" class="btn-large purple accent-3 darken-4">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </a>
+                            <a href="{{ url_for('register') }}" class="btn-large purple accent-3 darken-4">
+                                <i class="fas fa-user-plus"></i> Register
+                            </a>
+                         </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
