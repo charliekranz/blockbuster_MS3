@@ -9,6 +9,8 @@ jquery
 fontawesome
 werkzeug
 
+getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
+
 Rememmber to turn Debug to false
 
 

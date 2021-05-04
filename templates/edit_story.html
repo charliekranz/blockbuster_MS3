@@ -94,19 +94,22 @@
 
 
              <div class="row">
-                    <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
-                        Select the Cast</h5>
-                 {% for cast in casts %}
-                <div class="col l2 m3 s4">
-                     <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
-                    <p> 
-                        <label class="cast-name">
-                            <input value="{{ cast.cast_name }}" name="cast_name" id="cast_name" type="radio" selected/>
-                            <span>{{ cast.cast_name }}</span>
+                <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
+                    Select the Cast</h5>
+                    {% for cast in casts %}
+                        <div class="col s4 m3 l2">
+                        <label class ="cast_url">
+                            <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
+                            <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden"  multiple/>
                         </label>
-                    </p>
-                </div>
-                {% endfor %}
+                            <p> 
+                                <label class="cast-name">
+                                    <input value="{{ cast.cast_name }}" name="cast_name" id="cast_name" type="checkbox" multiple  />
+                                    <span>{{ cast.cast_name }}</span>
+                                </label>
+                            </p>
+                        </div>
+                    {% endfor %}
             </div>
 
 
