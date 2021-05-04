@@ -84,13 +84,10 @@
                         </label>
                             <p> 
                                 <label class="cast-name">
-                                    <input value="{{ cast.cast_name }}" name="cast_name" id="cast_name" type="checkbox" multiple  />
+                                    <input value="{{ cast.cast_name }}{{ cast.cast_url }}" name="cast_name" id="cast_name" type="checkbox" multiple  />
                                     <span>{{ cast.cast_name }}</span>
                                 </label>
                             </p>
-                             <label class="cast-url"></label>
-                                <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden"  multiple/>
-                            </label>
                         </div>
                     {% endfor %}
             </div>
