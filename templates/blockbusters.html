@@ -51,10 +51,11 @@
                             <!--{% for cast_url in story.cast_url %}
                                 <img class="materialboxed" width="100%" src="{{ story.cast_url }}">
                             {% endfor %}-->
-                            {% for cast_name in story.cast_name %}
+                            {% for cast_member in story.cast_members %}
                             <div class="row">
                             <div class="col m1 s4">
-                                <p>{{ cast_name }}</p>
+                                <p>{{ cast_member.cast_name }}</p>
+                                <img>{{ cast_member.cast_url }}</p>
                             </div>
                             </div>
                             {% endfor %}

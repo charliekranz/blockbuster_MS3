@@ -118,13 +118,6 @@ def logout():
 @app.route("/add_story", methods=["GET", "POST"])
 def add_story():
     if request.method == "POST":
-
-        cast_ids = request.form.getlist("cast_id")
-        cast_members = []
-        for cast_id in cast_ids:
-            cast member = mongo.db.find_one({"_id": ObjectId(cast_id)})
-            cast_members.append(cast_member)
-
         story = {
             "title_name": request.form.get("title_name"),
             "genre_name": request.form.get("genre_name"),
@@ -132,9 +125,9 @@ def add_story():
             "plot_name": request.form.get("plot_name"),
             "resolution_name": request.form.get("resolution_name"),
             "setting_name": request.form.get("setting_name"),
+            "cast_name": request.form.getlist("cast_name"),
+            "cast_url": request.form.getlist("cast_url"),
             "created_by":  session["user"]
-
-            "cast_members": cast_members
         }
         mongo.db.stories.insert_one(story)
         flash("Block+Buster Built!")
@@ -146,7 +139,8 @@ def add_story():
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
     casts = mongo.db.cast.find().sort("cast_name", 1)
-    return render_template("add_story.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
+    casturls = mongo.db.cast.find().sort("cast_url", 1)
+    return render_template("add_story.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts, casturls=casturls)
 
 
 @app.route("/edit_story/<story_id>/", methods=["GET", "POST"])
