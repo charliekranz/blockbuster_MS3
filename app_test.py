@@ -125,8 +125,7 @@ def add_story():
             "plot_name": request.form.get("plot_name"),
             "resolution_name": request.form.get("resolution_name"),
             "setting_name": request.form.get("setting_name"),
-            "cast_name": request.form.getlist("cast_name"),
-            "cast_url": request.form.getlist("cast_url"),
+            "cast_choice": request.form.getlist("cast_choice"),
             "created_by":  session["user"]
         }
         mongo.db.stories.insert_one(story)
@@ -138,9 +137,8 @@ def add_story():
     resolutions = mongo.db.resolution.find().sort("resolution_name", 1)
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
-    casts = mongo.db.cast.find().sort("cast_name", 1)
-    casturls = mongo.db.cast.find().sort("cast_url", 1)
-    return render_template("add_story.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts, casturls=casturls)
+    casts = mongo.db.cast.find().sort("cast_choice", 1)
+    return render_template("add_story.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
 
 
 @app.route("/edit_story/<story_id>/", methods=["GET", "POST"])

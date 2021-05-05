@@ -90,12 +90,11 @@
                     {% for cast in casts %}
                         <div class="col s4 m3 l2">
                         <label class ="cast_url">
-                            <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple  />
                             <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
                         </label>
                             <p> 
-                                <label class="cast-name">
-                                    <input value="{{ cast.cast_name }}" name="cast_name" id="cast_name" type="checkbox" multiple  />
+                                <label class="cast-choice">
+                                    <input value="{{ cast.cast_name }}_{{ cast.cast_url }}" name="cast_choice" id="cast_choice" type="checkbox" multiple  />
                                     <span>{{ cast.cast_name }}</span>
                                 </label>
                             </p>

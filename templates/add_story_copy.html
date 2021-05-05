@@ -9,6 +9,7 @@
         <form class="col s12" method="POST" action="{{ url_for('add_story') }}">
                  <h5><i class="fas fa-puzzle-piece prefix purple-text darken-4"></i>
                  Build the Story</h5>
+             
             <div class="row">
                  <!-- character -->
                 <div class="input-field col l3 m6 s12">
@@ -19,6 +20,7 @@
                             {% endfor %}
                     </select>
                 </div>
+
                 <!-- plot -->
                 <div class="input-field col l3 m6 s12">
                      <select id="plot_name" name="plot_name" class="validate" required>
@@ -28,6 +30,7 @@
                             {% endfor %}
                     </select>
                 </div>
+
                 <!-- resolution -->
                  <div class="input-field col l3 m6 s12">
                      <select id="resolution_name" name="resolution_name" class="validate" required>
@@ -37,6 +40,7 @@
                             {% endfor %}
                     </select>
                 </div>
+            
                 <!-- setting -->
                  <div class="input-field col l3 m6 s12">
                      <select id="setting_name" name="setting_name" class="validate" required>
@@ -46,11 +50,17 @@
                             {% endfor %}
                     </select>
                 </div>
+
+            <a id="randomize" href="#">randomize</a>
+
+
             </div>
+
+
             <!-- title-->
             <div class="row">
                 <div class="col m8 s12">
-                <h5><i class="fas fa-ticket-alt purple-text darken-4"></i>
+                <h5><i class="fas fa-pencil-alt purple-text darken-4"></i>
                     Write the Title</h5>
                         <input id="title_name" name="title_name" minlength="3"
                         maxlength="80" type="text" class=" input-field validate" required>
@@ -75,61 +85,25 @@
 
 
              <div class="row">
-                    <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
-                        Select the Cast</h5>
-                <div class="col s2">
-                     <img class="materialboxed" width="100%" src="/static/images/charlize-theron.jpg">
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span>Yellow</span>
+                <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
+                    Select the Cast</h5>
+                    {% for cast in casts %}
+                        <div class="col s4 m3 l2">
+                        <label class ="cast_url">
+                            <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
                         </label>
-                    </p>
-                </div>
-                <div class="col s2">
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span>Yellow</span>
-                        </label>
-                    </p>
-                </div>
-                <div class="col s2">
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span>Yellow</span>
-                        </label>
-                    </p>
-                </div>
-                <div class="col s2">
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span>Yellow</span>
-                        </label>
-                    </p>
-                </div>
-                <div class="col s2">
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span>Yellow</span>
-                        </label>
-                    </p>
-                </div> 
-                <div class="col s2">
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span>Yellow</span>
-                        </label>
-                    </p>
-                </div>
+                            <p> 
+                                <label class="cast-name">
+                                    <input value="{{ cast.cast_name }}{{ cast.cast_url }}" name="cast_name" id="cast_name" type="checkbox" multiple  />
+                                    <span>{{ cast.cast_name }}</span>
+                                </label>
+                            </p>
+                        </div>
+                    {% endfor %}
             </div>
 
 
-            <div class="row">
+<!--<div class="row">
                <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
                         Select the Cast</h5>
                 <div class="input-field col-12">
@@ -139,12 +113,12 @@
                                     {% for cast in casts %}
                                         <option value="{{ cast.cast_name }}" data-icon="/images/charlize-theron.jpg" class="left">{{ cast.cast_name }}</option>
                                     {% endfor %}
-                                </select>
-                            <!-- <label for="genre_name">Pick a Genre </label> */ -->
+                                </select>-->
+                            <!-- <label for="genre_name">Pick a Genre </label> */ 
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             
 
