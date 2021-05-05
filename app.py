@@ -122,7 +122,7 @@ def add_story():
         cast_ids = request.form.getlist("cast_id")
         cast_members = []
         for cast_id in cast_ids:
-            cast member = mongo.db.find_one({"_id": ObjectId(cast_id)})
+            cast_member = mongo.db.cast.find_one({"_id": ObjectId(cast_id)})
             cast_members.append(cast_member)
 
         story = {
@@ -132,7 +132,7 @@ def add_story():
             "plot_name": request.form.get("plot_name"),
             "resolution_name": request.form.get("resolution_name"),
             "setting_name": request.form.get("setting_name"),
-            "created_by":  session["user"]
+            "created_by":  session["user"],
 
             "cast_members": cast_members
         }
