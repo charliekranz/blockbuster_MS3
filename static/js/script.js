@@ -46,17 +46,19 @@ $(document).ready(function () {
 var minNumber = 0;
 var maxNumber = 19;
 
-$("#randomize").click(function() {
+function randomNumberFromRange(min,max) {
+    return  Math.floor(Math.random()*(max-min+1)+min); 
+
+
+}
+
+function clickme() {
     $("#setting_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
     $("#resolution_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
     $("#plot_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
     $("#character_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
-});
-
-function randomNumberFromRange(min,max) {
-    return  Math.floor(Math.random()*(max-min+1)+min); 
-    
 }
+
 
 /*
 $("#setting_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
@@ -64,24 +66,6 @@ $("#resolution_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNum
 $("#plot_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
 $("#character_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
 */
-
-/*
-    Random select from - https://stackoverflow.com/questions/52162153/selecting-random-value-from-dropdown-menu-in-javascript-nightwatch-js
-*/
-
-
-// get the dropdown element
-// const select  = document.getElementsByClassName('validate');
-
- // fetch all options within the dropdown
-// const options = select.children;  
-
- // generate a random number between 0 and the total amount of options
- // the number will always be an index within the bounds of the array (options) 
-// const random  = Math.floor(Math.random() * options.length);
-
- // set the value of the dropdown to a random option
-// select.value = options[random].value; 
 
 
 /*
