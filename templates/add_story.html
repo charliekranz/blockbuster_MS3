@@ -10,9 +10,6 @@
                  <h5><i class="fas fa-puzzle-piece prefix purple-text darken-4"></i>
                  Build the Story</h5>
              
-                 
-            <a href="#" onclicj="randomize()" >randomize</a>
-
             <div class="row">
                  <!-- character -->
                 <div class="input-field col l3 m6 s12">
@@ -23,6 +20,7 @@
                             {% endfor %}
                     </select>
                 </div>
+
                 <!-- plot -->
                 <div class="input-field col l3 m6 s12">
                      <select id="plot_name" name="plot_name" class="validate" required>
@@ -32,6 +30,7 @@
                             {% endfor %}
                     </select>
                 </div>
+
                 <!-- resolution -->
                  <div class="input-field col l3 m6 s12">
                      <select id="resolution_name" name="resolution_name" class="validate" required>
@@ -41,6 +40,7 @@
                             {% endfor %}
                     </select>
                 </div>
+            
                 <!-- setting -->
                  <div class="input-field col l3 m6 s12">
                      <select id="setting_name" name="setting_name" class="validate" required>
@@ -50,7 +50,13 @@
                             {% endfor %}
                     </select>
                 </div>
+
+            <a id="randomize" href="#">randomize</a>
+
+
             </div>
+
+
             <!-- title-->
             <div class="row">
                 <div class="col m8 s12">
