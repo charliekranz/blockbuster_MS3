@@ -38,7 +38,7 @@
                  </div>
             </div>
             <div class="row collapsible-body purple lighten-5">
-                <div class="col m9 s12"> 
+                <div class="col l8 m8 s12"> 
                     <strong><em><h6 class="genre-text purple-text"></em>
                         {{ story.genre_name }}</h6></br>
                         <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }}  {{ story.setting_name }} </h5> 
@@ -53,7 +53,7 @@
                             {% endfor %}-->
 
                             {% for cast_member in story.cast_members %}
-                            <div class="col l1 m1 s12">
+                            <div class="col l2 m2 s12">
                                 <p>{{ cast_member.cast_name }}</p>
                                 <img class="materialboxed" width="100px" src="{{ cast_member.cast_url }}" >
                             </div>
