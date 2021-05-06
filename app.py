@@ -17,15 +17,18 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("home.html")
 
+
 @app.route("/")
 @app.route("/about")
 def about():
     return render_template("about.html")
+
 
 @app.route("/")
 @app.route("/get_stories")
@@ -91,7 +94,7 @@ def login():
             # username not valid
             flash("Sorry - incorrect Password and/or Username")
             return redirect(url_for("login"))
-    
+
     return render_template("login.html")
 
 
@@ -100,7 +103,7 @@ def profile(username):
     # get session user's username from database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    
+
     if session["user"]:
         return render_template("profile.html", username=username)
 

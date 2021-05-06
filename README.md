@@ -9,6 +9,10 @@ jquery
 fontawesome
 werkzeug
 
+using hover (akragas)
+popper and slim min
+fancybox
+
 getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
 
 randomize additional tweaks - https://jsfiddle.net/aqpwcoju/1/

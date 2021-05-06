@@ -30,7 +30,8 @@ h1, h2 {
 }
 
 hr.purple-bold {
-    border: 2px solid #4a148c;
+    border: 1px solid #4a148c;
+    margin-top: 0.5em;
 }
 
 hr.purple-light {
@@ -130,3 +131,911 @@ hr.purple-light {
 
 }
 */
+
+
+/*--------------------------------------------------------  General */
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex-container {
+    display: flex;
+}
+
+div.inline { 
+    float:left;
+}
+
+.clearBoth {
+    clear:both;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(179, 18, 48, 0.74);
+}
+
+/*-------------------------------------------------------- Colours */
+
+.red {
+    color: #660012;
+}
+
+.grey {
+    color: #505050;
+}
+
+.white {
+    color: #fff;
+}
+
+.blue {
+    color: #0A4B66;
+}
+
+.lt-blue {
+    color: #73aecf;
+}
+
+.lt-grey {
+    color: #efefef;
+}
+
+.bright-red {
+    color: #f8123c;
+}
+
+.mid-red {
+    color:#b3122f;
+}
+
+/*-------------------------------------------------------- Fonts */
+
+.purple-text {
+    color: #4a148c;
+}
+
+.title-text {
+    font-family: 'Anton', sans-serif;
+
+}
+
+
+
+a {
+    color: #660012;
+ }
+
+a:hover {
+    color: #f8123c;
+ }
+
+.large-icon {
+    text-align: center;
+    color: #660012;
+    font-size: 2.5em;
+    margin-bottom: .25em;
+}
+
+.title {
+    text-align: center;
+}
+
+@media only screen and (max-width: 780px) {
+    h2.site-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    h2.site-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    h2.site-title {
+        font-size: 1.3rem;
+    }
+}
+
+.subtitle {
+    text-align: center;
+}
+
+p.cap {
+    padding-top: 20px;
+    font-size: .8rem;
+    font-weight: 100;
+    line-height: 1.1;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+p.intro {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3b3b3b;
+}
+
+/*--------------------------------------------------------  Buttons */
+
+.btn-book {
+    color: #fff;
+    background-color: #660012;
+    border-color: #48000d;
+    font-family: 'Lexend Peta', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.btn-book:hover, .btn-book:focus, .btn-book:active, .btn-book.active, .open>.dropdown-toggle.btn-book {
+    color: rgb(248, 18, 60);
+}
+
+/*--------------------------------------------------------  Logo */
+.logo {    
+    border: 1px solid grey;
+}
+
+/*--------------------------------------------------------  Menu */
+/* - Bootstrap Navbar code was used and modified for navbar https://getbootstrap.com/docs/4.0/components/navbar/
+- Hover CSS Hover css was used for menu buttons - <https://ianlunn.github.io/Hover/#effects> */
+
+.navbar-brand h2 {
+    color: #4a148c;
+}
+
+.nav-item a {
+    color: #4a148c;
+}
+
+.menu {
+     background-color: #fff;
+}
+
+.bg-light {
+    background-color: #fff!important;
+}
+
+.navbar {
+    padding: 0.5rem 0.25rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #4a148c;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1.1px;
+}
+
+.navbar-nav .nav-link {
+    margin-left: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #4a148c2;
+}
+
+.hvr-sweep-to-bottom:before {
+    background-color: #4a148c;
+    border-radius: 3px;
+    padding: 2px;
+    margin: 1px;
+    }
+
+.navbar-light .navbar-toggler {
+    color: rgba(102, 10, 18, .5);
+    border-color: rgba(102, 10, 18, .9);
+}
+
+/*--------------------------------------------------------  Home */
+.hero-image {
+    background: url("../images/akragas-panorama.jpg");
+    background-position: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 420px;
+}
+
+.intro2 {
+    margin-bottom: 3.6rem;
+}
+
+@media only screen and (max-width: 1800px) {
+    .intro2 {
+        margin-bottom: 3rem;
+    }
+}       
+
+@media only screen and (max-width: 1300px) {
+    .intro2 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .intro2 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 778px) {
+    .intro1 {
+        font-size: 1.5rem;
+        }
+    .intro2 {
+        font-size: 1.3rem;
+        margin-bottom: .75rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .intro1 {
+        font-size: 1.4rem;
+    }
+}
+
+/*-------------------------------------------------------- Quote Box */
+
+.quote-box {
+    background-color: rgba(58, 0, 5, 0.8);
+    color: rgba(248, 18, 60, 1);
+    padding: 7%;
+    z-index: 1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.quote-box-flush {
+    background-color: rgba(58, 0, 5, 0.8);
+    color: rgba(248, 18, 60, 1);
+    padding: 7%;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+.quote-box-hero {
+    background-color: rgba(58, 0, 5, 0.6);
+    color: rgba(248, 18, 60, 1);
+    padding: 7%;
+    z-index: 1;
+    margin-bottom: 25%;
+    margin-left: 15%;
+}
+
+h3.big-hero-text {
+    font-size: 2.5rem;
+}
+
+h4.big-hero-name {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    h3.big-hero-text {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    h3.big-hero-text {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+h3.quote-text {
+    font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+h4.quote-name {
+    font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+h5.quote-subline {
+    font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+h3.big-hero-text {
+    font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+h4.big-hero-name {
+    font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+.quote-box-hero {
+    margin-bottom: 25%;
+    margin-left: 0%;
+    font-size-adjust: .7;
+    }
+}
+
+.quote-name {
+    text-align: right;
+}
+
+.quote-subline {
+    text-align: right;
+}
+
+/*-------------------------------------------------------- About */
+
+.about {
+    background-color: #efefef;
+    padding-top: 15px;
+}
+
+.about-title {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align:center;
+}
+
+.about-intro-row {
+   /* margin: 0px 6px 0px 6px;*/ 
+}
+
+.about-body-text {
+    margin-bottom: 0.75em;
+    padding-left: 2rem;
+    padding-right: 2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-body-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+}
+
+.about-image-bg {
+     background: url("../images/1024px-Akragas_406_a.C..jpg");
+     padding-top: 5px;
+     min-height: 50em;
+     }
+
+.inset-image {
+    padding: 10px;
+}
+
+/*-------------------------------------------------------- Video Box */ 
+
+.container-fluid.video-box {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.video-box {
+    width: 88%;
+    height: 88%;
+    position: relative;
+    margin: auto;
+    top: 42%;
+    left: 44%;
+    transform: translate(-50%, -5%);
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 540px) {
+    .video-box {
+        width: 110%;
+        position: relative;
+        margin: auto;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        padding-top: 2px;
+        padding-bottom: 10px;
+    }
+}
+
+/*-------------------------------------------------------- Timeline */ 
+/* Timeline - modified code used in Code Institute UCD Resume project https://github.com/charliekranz/UCD-resume */
+.timeline {
+    background-color: #53000f;
+    min-height: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.timeline-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-size: 22px;
+    padding: 20px 0px 10px;
+    color: #dee2e6;
+}
+
+.timeline-title-small {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+/*-------------------------------------------------------- Timeline Horizontal */ 
+
+.timeline-point-hoz {
+    margin-top: 65px;
+    padding: 1.4em 2em 1em 2em;
+    position: relative;
+    border-top: 1px solid;
+    text-align: center;
+    color: #c6babc;
+}
+
+.timeline-point-hoz:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 4.55em;
+    top: -3em;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 0;
+    margin:0;
+}
+
+.timeline-point-hoz:after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: -0.4em;
+    position: absolute;
+    left: 50px;
+    border-radius: 12px;
+    content: '';
+    background: #fafafa;
+}
+
+.date-info-hoz {
+    font-size: 18px;
+    text-align: left;
+}
+
+ @media only screen and (max-width: 1200px) {
+    .date-info-hoz {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .date-info-hoz {
+        font-size: 14.5px;
+    }
+}
+
+.timeline-point-hoz:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 3.8em;
+    top: -3em;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 0;
+    margin:0;
+}
+
+.timeline-point-hoz:after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: -0.4em;
+    position: absolute;
+    left: 90px;
+    border-radius: 12px;
+    content: '';
+    background: #fafafa;
+}
+
+@media only screen and (max-width: 920px) {
+    .timeline-point-hoz:before {
+        left: 2em;
+    }
+    .timeline-point-hoz:after {
+        left: 60px;
+    }
+}
+
+/*-------------------------------------------------------- Timeline Vertical */ 
+
+.timeline-point-vert {
+    padding: 4em 2em 1em 2em;
+    position: relative;
+    color: #c6babc;
+    border-left: 1px solid;
+    margin-left: 16px;
+}
+
+.timeline-point-vert:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 1.9em;
+    top: 2em;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 0;
+    margin:0;
+}
+
+.timeline-point-vert:after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content: '';
+    background: #fafafa;
+}
+
+.date-info-vert {
+    font-size: 18px;
+}
+
+/*-------------------------------------------------------- Temples */ 
+
+.temples {
+    background-color: #AD9C9F;
+}
+
+.temple-segments {
+     background-color: rgba(254, 254, 254, 0.3);
+}
+
+.temple-title-section {
+    padding-top: 10px;
+}
+
+.temple-intro-title {
+    padding-top: 24px;
+}
+
+.temple-text {
+    padding-bottom: 0px;
+}
+
+.temple-text-bg {
+    background: url("../images/pilars.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    opacity: 0.9;
+    }
+
+.temple-title {
+    padding-top: 8px;
+    color:#660012;
+}
+
+.temple-text-col {
+    padding-bottom: 10px;
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+   /* IE10+ specific styles go here - I got this tip from https://paper-leaf.com/insights/targeting-ie-10-11-browsers-css/*/  
+   .temple-text-col {
+        padding-right: 38px;
+    }
+}
+
+.temple-column {
+    margin: 30px 5px 20px 5px;
+}
+
+/*--------------------------------------------------------  Compact Gallery */
+/* Gallery code from https://demo.tutorialzine.com/2018/03/3-amazing-bootstrap-4-gallery-templates/#compact-gallery which I further styled*/
+
+.gallery-block{
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.gallery-block .heading{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gallery-block .heading h2{
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.gallery-block.compact-gallery .item{
+    overflow: hidden;
+    margin-bottom: 0;
+    background: black;
+    opacity: 1;
+}
+
+.gallery-block.compact-gallery .item .image{
+    transition: 0.8s ease;
+}
+
+.gallery-block.compact-gallery .item .info{
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-block.compact-gallery .item .description{
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 18px;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    opacity: 1;
+    transition: 0.8s ease;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
+}
+
+.gallery-block.compact-gallery .item .description .description-body{
+    font-size: 0.8em;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+@media (min-width: 576px) {
+    .gallery-block.compact-gallery .item .description {
+        opacity: 0; 
+    }
+    .gallery-block.compact-gallery .item a:hover .description {
+        opacity: 1; 
+    } 
+    .gallery-block .zoom-on-hover:hover .image {
+        transform: scale(1.3);
+        opacity: 0.7; 
+    }
+}
+
+/*--------------------------------------------------------  Gallery */
+
+.gallery {
+    color: #efefef; 
+    background-color: #0C152D;
+    background: url("../images/galaxy-sky.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    opacity: 1;
+}
+
+.intro-title-gallery {
+    padding-top: 1.5rem;
+    padding-bottom: 0.75rem;
+}
+
+.gallery-block {
+    padding-bottom: 20px;
+    padding-top: 0px;
+}
+
+.gallery-block .heading {
+    margin-bottom: 16px;
+}
+
+.gallery-block.compact-gallery .item .description .description-heading {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: .9em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+/*Gallery and caption code from http://fancyapps.com/fancybox/3/ which I further styled*/
+.fancybox-caption__body {
+    font-size: 1.4em;
+    line-height: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+/*--------------------------------------------------------  Visit */
+
+.visit {
+    background-color: #fefefe;
+}
+
+.visit-box {
+    margin: 10px;
+}
+
+.map-box {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.button-box {
+    margin: 24px;
+}
+
+@media only screen and (max-width: 767px) {
+    .map-box {
+        margin: 0px 0px 24px;
+    }
+}
+
+/*--------------------------------------------------------  Contact */
+/*-- Contact Form - modified code used in Code Institute UCD Resume project https://github.com/charliekranz/UCD-resume */
+.contact {
+    color: #efefef; 
+    background-color: #0A4B66;
+    background: url("../images/night-zeus.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    opacity: 1;
+}
+
+.blue-overlay {
+    background-color: rgba(0, 17, 24, 0.4);
+}
+
+.form-box {
+    padding: 24px 10px 10px 10px;
+}
+
+.form-control {
+    border-radius: 0.33rem;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 5px;
+}
+
+.form-check-label {
+    font-size: .85em;
+    color: #73aecf;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.2em;
+    text-align: left;
+    padding-left: 6px;
+}
+
+.form-check-input {
+    position: absolute;
+    margin-top: 0.3rem;
+    margin-left: -1rem;
+}
+
+.form-check {
+    padding-left: 3rem;
+    padding-top: 0.25em;
+}
+
+.icon-row {
+    margin: 10px;
+}
+
+.icon-row-small {
+    min-height: 5em;
+}
+
+@media only screen and (max-width: 700px) {
+    .icon-row {
+        margin: 10px;
+    }
+}
+
+.icon-row a {
+    color: #fff;
+}
+
+.icon-row a:hover {
+    color: #73aecf;;
+}
+
+.fa-resize {
+    font-size: 4.25em;
+    text-align: center;
+    padding: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .fa-resize {
+        margin: 0px;
+        font-size: 3.8em;
+        text-align: center;
+        padding: 18px;
+    }
+}
+
+@media only screen and (max-width: 948px) {
+    .fa-resize {
+        margin: 0px;
+        font-size: 3.4em;
+        text-align: center;
+        padding: 14px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .fa-resize {
+        font-size: 3.2em;
+        text-align: center;
+        padding: 12px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .fa-resize {
+        font-size: 2.2em;
+        text-align: center;
+        padding-right: 8px;
+        padding-left: 8px;
+        padding-top: 8px;
+        padding-bottom: 30px;
+    }
+}
+
+/*--------------------------------------------------------  Footer */
+
+.footer {
+    height: 160px;
+    background-color: #660012;
+}
+
+.footer-menu {
+    margin-top: 10px;
+}
+
+.footer-menu a {
+    text-align: center;
+    text-transform: uppercase;
+    color: #c6babc;
+}
+
+.footer-menu a:hover {
+    text-align: center;
+    text-transform: uppercase;
+    color: #f8123c;
+    text-decoration: none;
+}
+
+.footer-menu p {
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #c6babc;
+}

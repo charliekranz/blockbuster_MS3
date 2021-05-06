@@ -2,7 +2,7 @@
     jQuery for MaterializeCSS initialization
 */
 
-$(document).ready(function () {
+/*$(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
     $("select").formSelect();
@@ -10,7 +10,7 @@ $(document).ready(function () {
 
  
     /* Dropdown Validation code from Code Institute Task Master Project */
-    validateMaterializeSelect();
+    /*validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 2px 0 0 #aa00ff" };
         let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 2px 0 0 #ff0000" };
