@@ -11,7 +11,11 @@
                     <div class="input-field ">
                         <input type="text" name="query" id="query" minlength="2" class="validate form-control" placeholder="Search Block+Busters" required>
                              <i class="fas fa-search prefix purple-text "></i> 
-                            <label for="query">Search by Title, Story or Cast</label>
+                            <label for="query">
+                                <h6 class="tiny-text">
+                                <em>Search by Title, Story or Cast</em>
+                                </h6>
+                            </label>
                     </div>
                 </div>
                 <div class="col-sm-3 align-middle text-center">
@@ -33,7 +37,8 @@
             <div class="card">
                 <div class="card-header bb-title" id="" >
                     <button class="btn btn-link" data-toggle="collapse" data-target="#{{ story.title_name }}" aria-expanded="true" aria-controls="{{ story.title_name }}">
-                        <h3 class="bb-title title-white">{{ story.title_name }} <!--<i class="fas fa-ticket-alt"></i>--></h3>
+                        <h3 class="bb-title title-white"><i class="fas fa-ticket-alt purple-text fa-lg"></i>
+                            {{ story.title_name }} <!--<i class="fas fa-ticket-alt"></i>--></h3>
                     </button>
                     {% if session.user|lower == story.created_by|lower %}
                         <a href="{{ url_for('edit_story', story_id=story._id) }}" class="btn btn-outline-light btn-sm" role="button" align-right>Edit</a>
@@ -71,7 +76,8 @@
     {% else %}
 
 <!-- No Results from Search-->
-    <div class="build-card card-padding">
+    <hr class="purple-light">
+    <div class="build-card card-padding pt-4">
     <h3 class="purple-text text-center"><i class="fas fa-comment-slash"></i> 
         No Block+Busters Found
     </h3>
