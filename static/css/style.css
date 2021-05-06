@@ -119,11 +119,11 @@ hr.purple-thin {
 
 
 
-/* Cast Images */
-
-.cast-images {
-      display: inline-block;
+/* Cast Images * found very helpful demo for the inline fix*/
+.cast-images > * {
+    display: inline-block;
 }
+
 
 /* Buttons */ 
 .btn-small {

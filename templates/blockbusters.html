@@ -68,23 +68,23 @@
                 <div class="card-body bb-card">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <strong><em><h6 class="genre-text purple-text"></em>
                                 {{ story.genre_name }}</h6></br>
                                 <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }} {{ story.setting_name }}</h5> 
                                 </strong>
                                 <p><em>by: {{ story.created_by }}</em></p>
                             </div>
-                            <div class="col-12 col-md-6 cast-mages"> 
-                                <strong><em><p>Featured Cast:</p></em></strong>
+                            <div class="col-12 col-lg-6 cast-images"> 
+                               <strong><em><p>Featured Cast:</p></em></strong>
                                         {% for cast_member in story.cast_members %}
                                         <div class="col-4 col-md-2">
                                             <img class="rounded-circle inline-block" width="100%" src="{{ cast_member.cast_url }}" >
                                             <p class="cast-label-display">{{ cast_member.cast_name }}</p>
                                         </div>
                                         {% endfor %}
-                                </strong>
                             </div>
+
                         </div>
                     </div>
                 </div>
