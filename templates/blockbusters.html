@@ -3,7 +3,8 @@
 
     <h3 class="text-center purple-text title-text"><i class="fas fa-ticket-alt"></i> The Block+Busters</h3>
 
-    <div class="card purple card-padding">
+<!-- Search-->
+    <div class="card bb-card purple card-padding">
         <form action="{{ url_for('search') }}" method="post" class="">
             <div class="row align-middle">
                 <div class="col-sm-9">
@@ -24,6 +25,7 @@
         </form>
     </div>
 
+<!-- Blockbuster Loop-->
     {% if stories|length > 0 %}
     <div id="accordion">
         {% for story in stories %}
@@ -67,6 +69,8 @@
         {% endfor %}
     </div>
     {% else %}
+
+<!-- No Results from Search-->
     <div class="build-card card-padding">
     <h3 class="purple-text text-center"><i class="fas fa-comment-slash"></i> 
         No Block+Busters Found
