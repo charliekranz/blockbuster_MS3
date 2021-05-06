@@ -34,13 +34,12 @@
         <div class="row align-middle">
                 <div class="col-sm-9">
                      <div class="input-field ">
-                                <i class="fas fa-search prefix purple-text text-darken-4"></i> 
-                                <label for="query">Search Block+Busters by Title, Story or Cast</label>
-
-                                <input type="text" name="query" id="query" minlength="2" class="validate form-control" required>
+                        <input type="text" name="query" id="query" minlength="2" class="validate form-control" placeholder="Search Block+Busters" required>
+                            <i class="fas fa-search prefix purple-text "></i> 
+                            <label for="query">Search by Title, Story or Cast</label>
                         </div>
                 </div>
-                <div class="col-sm-3 align-middle">
+                <div class="col-sm-3 align-middle text-center">
                     <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-search left"></i> Search
                                 </button>
@@ -95,11 +94,11 @@
         {% endfor %}
     </div>
     {% else %}
-    <div class="row card-panel purple lighten-5">
-    <h4 class="purple-text text-darken-4 center-align"><i class="fas fa-comment-slash"></i> 
+    <div class="build-card card-padding">
+    <h4 class="purple-text text-center"><i class="fas fa-comment-slash"></i> 
         No Block+Busters Found
     </h3>
-    <p class="purple-text text-darken-4 center-align">
+    <p class="purple-text text-center">
         Try another search.
     </p>
     </div>
