@@ -67,9 +67,11 @@ hr.purple-thin {
 
 .flashed h5 {
     line-height: 2;
+    font-size: 1.6em;
     text-transform: uppercase;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.25em;
     color: #aa00ff ;
+    text-align: center!important;
 }
 
 .icon-space {
@@ -1100,6 +1102,15 @@ button, input, optgroup, select, textarea {
     text-transform: uppercase;
     color: #c6babc;
 }
+
+.form-control {
+    font-size: 1.25em;
+    color: #4a148c;
+    
+}
+
+
+
 
 /*
 .checkbox-lg .custom-control-label::before, 
