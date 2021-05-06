@@ -40,7 +40,7 @@ $(document).ready(function () {
 });
 
 /*
-    https://jsfiddle.net/s59g8vdp/1/
+   Radomize code put together using  https://jsfiddle.net/aqpwcoju/1/ and hint from friend regarding Materialize dropdown targettting - https://stackoverflow.com/questions/30341095/change-value-of-materialize-select-box-by-jquery
 */
 
 var minNumber = 1;
