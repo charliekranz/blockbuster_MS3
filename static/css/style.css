@@ -132,7 +132,15 @@ hr.purple-thin {
     color: #636363;
     text-align: center;
     font-family: 'Anton', sans-serif;
+}
 
+
+.cast-label-display {
+    line-height: 1.2em;
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+    color: #636363;
+    text-align: left;
 }
 
 .checkbox {
