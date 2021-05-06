@@ -1,44 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h4 class="center-align title-purple">
+    <h3 class="text-center purple-text title-text">
         <i class="fas fa-sign-in-alt fa-sm"></i> Login
-    </h4>
+    </h3>
 
-    <div class="row">
+
+    <div class="row card build-card card-padding col-8 offset-2">
+        <div class="body">
+
         <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel purple lighten-5">
                  <!-- username -->
                 <div class="row">
-                     <div class="input-field col s12">
-                        <i class="fas fa-signature prefix purple-text text-darken-4"></i>
-                        <input id="username" name="username" minlength="3" maxlength="30" type="text" 
-                        pattern="^[a-zA-Z0-9]{3,30}$" class="validate required">
+                     <div class="input-field col-8 offset-2">
+                        <i class="fas fa-signature purple-text"></i>
                         <label for="username">Username</label>
+                        <input id="username" name="username" minlength="3" maxlength="30" type="text" 
+                        pattern="^[a-zA-Z0-9]{3,30}$" class="validate form-control" required>
                      </div>
                 </div>
                  <!-- password -->
                 <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-key prefix purple-text text-darken-4"></i>
-                        <input id="password" name="password" type="password" 
-                        minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
+                    <div class="input-field col-8 offset-2">
+                        <i class="fas fa-key purple-text"></i>
                         <label for="password">Password</label>
+                        <input id="password" name="password" type="password" 
+                        minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate form-control" required>
                     </div>
                  </div>
                  <!-- login -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn-large purple darken-4 text-shadow">
+                <div class="pt-4 row d-flex justify-content-center">
+                    <button type="submit" class="btn-lg btn-primary text-center">
                         Login <i class="fa fa-sign-in-alt"></i>
                     </button>
                 </div>
             </div>
         </form>
     </div>
+</div>
 
     <div class="row">
-        <div class="col m6 offset-m3">
-            <p class="center-align border-solid">
+        <div class="pt-4 col-6 offset-3">
+            <p class="text-center border-solid">
                 Haven’t Registered? 
                 <a href="{{ url_for('register') }}" class="purple-text">Register Now</a> 
             </p>
