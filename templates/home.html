@@ -1,38 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="container">
     <div class="row">
-        <div class="col s12 m12 " >
-            <div class="card-panel purple lighten-5">
-                <h1 class="center-align purple-text text-darken-4 headline">
+        <div class="col-12" >
+                <div class="card bb-card card-padding">
+                <h1 class="text-center purple-text headline">
                     Become a Movie Mogul in Minutes!
                 </h1>
-                <h3 class="center-align purple-text accent headline">
+                <h3 class="text-center purple-text headline">
                     You’re a Hollywood Player in Four Simple Steps
                 </h3>
                 <div class="row">
-                    <div class="white-box center-align col s12 m3" >
+                    <div class="white-box text-center col-12 col-md-3" >
                         <h3 class="box-text">
                             <i class="fas fa-puzzle-piece"></i>
                             Build the Story
                         </h3>
                     </div>
 
-                    <div class="white-box center-align col s12 m3" >
+                    <div class="white-box text-center col-12 col-md-3" >
                         <h3 class="box-text">
                             <i class="fas fa-pencil-alt"></i>
                             Write the Title
                         </h3>
                     </div>
 
-                    <div class="white-box center-align col s12 m3" >
+                    <div class="white-box text-center col-12 col-md-3" >
                         <h3 class="box-text">
                             <i class="fas fa-theater-masks"></i>
                             Pick The Genre
                         </h3>
                     </div>
 
-                    <div class="white-box center-align col s12 m3" >
+                    <div class="white-box text-center col-12 col-md-3" >
                         <h3 class="box-text">
                             <i class="fas fa-users"></i>
                             Select the Cast
@@ -40,69 +41,83 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="card-panel purple darken-1 s12">
-                            <h5 class="center-align white-text mono">
-                                <i class="fas fa-mug-hot fa-pull-left fa-3x"></i>
+                    <div class="card-panel col-10 offset-1 pt-4 pt-4">
+                            <h5 class="text-center mono">
+                                <i class="fas fa-mug-hot fa-pull-left fa-3x purple-text"></i>
                                  In the time it takes to brew a cup of coffee you could put together the next Blockbuster film project! Seriously!! Simply build your Block+Buster using our pre-set Character, Plot, Resolution and Setting options and maybe even try some Random Choices to mix things up.
                             </h5>
                     </div>
-                        <div class="div col s10 offset-s1">
-                            <h4 class="bb-title center-align purple-text darken-1">Giving Props Where Props Are Due</h4>
-                                <h5 class=" center-align purple-text darken-1 mono">
+                        <div class="div col-12 pt-4">
+                            <h4 class="bb-title text-center purple-text ">Giving Props Where Props Are Due</h4>
+                                <h5 class=" text-center purple-text">
                                  Block+Buster+Builder was inspired by The Brothers’ Heimberg hilarious and ground-breaking masterpiece <em>The Official Movie Plot Generator.</em> <a href="{{ url_for('about') }}">Learn more about the book</a> - or <a href="https://www.amazon.co.uk/Official-Movie-Plot-Generator-Combinations/dp/0974043915" target="_blank" >buy a copy today</a> from Amazon.
                             </h5>
                          </div>
                     </div>    
                 </div>
 
-            <div class="div col m6 s12">
-                <div class="card-panel purple darken-1">
-                 <h4 class="bb-title center-align white-text"><i class="fas fa-film fa-lg icon-space"></i></br>
-                    Browse the Block+Busters</h4>
-                    <p class="center-align white-text">
-                        View the Collection
-                    </p>
+                <div class="container"></div>
                     <div class="row">
-                        <div class="col-s12 center-align">
-                            <a href="{{ url_for('get_stories') }}" class="btn-large purple accent-3 darken-4">
-                                <i class="fas fa-film"></i> Browse
-                            </a>
-                        </div>
-                    </div>                  
-                </div>
-            </div>
-            <div class="div col m6 s12">
-                <div class="card-panel purple darken-1">
-                 <h4 class="bb-title center-align white-text"><i class="fas fa-video fa-lg icon-space"></i></br>
-                    Build A Block+Buster</h4>
-                    {% if session.user %}
-                    <p class="center-align white-text">
-                    Create Your Own
-                    </p>
-                    <div class="row">
-                        <div class="col-s12 center-align">
-                            <a href="{{ url_for('add_story') }}" class="btn-large purple accent-3 darken-4">
-                                <i class="fas fa-video"></i> Build
-                            </a>
-                        </div>
-                    </div>
-                    {% else %}
-                    <p class="center-align white-text">
-                    Login or Register to Build Your Own
-                    </p>
-                    <div class="row">
-                        <div class="col-s12 center-align">
-                            <a href="{{ url_for('login') }}" class="btn-large purple accent-3 darken-4">
-                                <i class="fas fa-sign-in-alt"></i> Login
-                            </a>
-                            <a href="{{ url_for('register') }}" class="btn-large purple accent-3 darken-4">
-                                <i class="fas fa-user-plus"></i> Register
-                            </a>
-                         </div>
-                    </div>
-                    {% endif %}
+                        <div class="div col-12 col-md-6 pt-4">
+                            <div class="card-header card-padding">
+                                <h4 class="bb-title center-align title-white"><i class="fas fa-film fa-lg icon-space"></i></br>
+                                    Browse the Block+Busters</h4>
+                                    <h4 class="text-center purple-text">
+                                        View the Collection
+                                    </h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center pt-4">
+                                            <div class="col-md-6 text-center">
+                                                <a href="{{ url_for('get_stories') }}" class="btn-lg btn-primary-2">
+                                                <i class="fas fa-film"></i> Browse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="div col-12 col-md-6 pt-4">
+                            <div class="card-header card-padding">
+                                <h4 class="bb-title center-align title-white"><i class="fas fa-video fa-lg icon-space"></i></br>
+                                    Build A Block+Buster</h4>
+                                    {% if session.user %}
+                                    <h4 class="text-center purple-text">
+                                    Create Your Own
+                                    </h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center pt-4">
+                                            <div class="col-md-6 text-center">
+                                                <a href="{{ url_for('add_story') }}" class="btn-lg btn-primary-2">
+                                                <i class="fas fa-video"></i> Build
+                                                </a>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                    <h4 class="text-center purple-text">
+                                    Login or Register to Build Your Own
+                                    </h4>
+
+                                    <div class="container">
+                                        <div class="row justify-content-md-center pt-4">
+                                            <div class="col text-center">
+                                            <a href="{{ url_for('login') }}" class="btn-lg btn-primary-2">
+                                                <i class="fas fa-sign-in-alt"></i> Login
+                                            </a>
+                                            </div>
+                                            <div class="col text-center">
+                                            <a href="{{ url_for('register') }}" class="btn-lg btn-primary-2">
+                                                <i class="fas fa-user-plus"></i> Register
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    {% endif %}
                 </div>
             </div>
         </div>
+    </div>
 
 {% endblock %}

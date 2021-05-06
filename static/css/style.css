@@ -2,6 +2,16 @@ h1, h2 {
     font-family: 'Anton', sans-serif;
 }
 
+
+a {
+    color: #aa00ff;
+ }
+
+a:hover {
+    color:#4a148c;
+ }
+
+
 .tiny-text {
     font-size: 0.85em;
     font-weight: 300;
@@ -20,6 +30,18 @@ h1, h2 {
 .btn-primary:hover {
     background-color: #aa00ff;
     border-color: #aa00ff;
+}
+
+.btn-primary-2 {
+    background-color: #4a148c;
+    border-color: #4a148c;
+    color: #fff;
+}
+
+.btn-primary-2:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #4a148c;
 }
 
 .mono {
@@ -285,14 +307,6 @@ hr {
     font-family: 'Anton', sans-serif;
 }
 
-
-a {
-    color: #660012;
- }
-
-a:hover {
-    color: #f8123c;
- }
 
 .large-icon {
     text-align: center;
