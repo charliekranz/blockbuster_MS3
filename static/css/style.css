@@ -1073,7 +1073,8 @@ button, input, optgroup, select, textarea {
 
 .footer {
     height: 160px;
-    background-color: #660012;
+    background-color: #4a148c;
+    color: #e1a6ff;
 }
 
 .footer-menu {
