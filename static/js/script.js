@@ -43,11 +43,11 @@ $(document).ready(function () {
     https://jsfiddle.net/s59g8vdp/1/
 */
 
-var minNumber = 0;
-var maxNumber = 19;
+var minNumber = 1;
+var maxNumber = 20;
 
 function randomNumberFromRange(min,max) {
-    return  Math.floor(Math.random()*(max-min+1)+min); 
+return  Math.floor(Math.random()*(max-min+1)+min); 
 
 
 }
@@ -57,15 +57,13 @@ function clickme() {
     $("#resolution_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
     $("#plot_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
     $("#character_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
+
+
+$("#setting_name").formSelect();
+$("#resolution_name").formSelect();
+$("#plot_name").formSelect();
+$("#character_name").formSelect();
 }
-
-
-/*
-$("#setting_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
-$("#resolution_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
-$("#plot_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
-$("#character_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
-*/
 
 
 /*

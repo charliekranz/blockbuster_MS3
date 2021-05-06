@@ -11,6 +11,9 @@ werkzeug
 
 getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
 
+randomize additional tweaks - https://jsfiddle.net/aqpwcoju/1/
+https://stackoverflow.com/questions/30341095/change-value-of-materialize-select-box-by-jquery
+
 Rememmber to turn Debug to false
 
 
