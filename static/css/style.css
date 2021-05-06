@@ -73,7 +73,15 @@ hr.purple-light {
     text-align: center;
     font-weight: 800;
     /* font-family: 'Anton', sans-serif; */
+}
 
+.build-title {
+    font-family: 'Anton', sans-serif;
+    line-height: 1.5;
+}
+
+.build-card {
+    background-color: #dd99ff4f;
 }
 
 .box-text {
@@ -87,8 +95,14 @@ hr.purple-light {
     padding: 16px 4px 16px 4px;
 }
 
+/* Buttons */ 
 .btn-small {
     margin:4px;
+}
+
+.purple-button {
+    color: #aa00ff;
+
 }
 
 .collapsible-header .col .strong {
@@ -121,6 +135,14 @@ hr.purple-light {
 .dropdown-content {
     white-space: normal;
 }
+
+
+/* Cards  */
+
+.card-padding {
+    padding: 1.5em;
+}
+
 
 /*
 .select-wrapper {

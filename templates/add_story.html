@@ -1,22 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h4 class="center-align purple-text text-darken-4">
-        <i class="fas fa-video"></i> Build a Block+Buster
-    </h4>
+    <h3 class="text-center purple-text title-text"><i class="fas fa-video"></i> Build a Block+Buster</h3>
     <!-- story -->
-    <div class="row card-panel purple lighten-5">
+
+    <div class="row card build-card card-padding">
+        <div class="body">
         <form class="col s12" method="POST" action="{{ url_for('add_story') }}">
-                 <h5><i class="fas fa-puzzle-piece prefix purple-text darken-4"></i>
-                 Build the Story</h5> 
+            <h3 class="build-title purple-text"><i class="fas fa-puzzle-piece prefix"></i>
+                 Build the Story</h3> 
             <span class="center-align">
-            <button type="button" value="Randomize" class="btn-large purple accent-3 darken-4 " onclick="clickme();">
-                Randomize The Story
+            <button type="button" value="Randomize" class="btn btn-light btn-sm" onclick="clickme();">
+                <h5 class="purple-button"><i class="fas fa-random"></i> Randomize The Story</h5>
             </button>
             </span>
-            <div class="row">
-                 <!-- character -->
-                <div class="input-field col l3 m6 s12">
+
+
+
+
+        <!-- character -->
+           <div class="row">
+                 <div class="input-field col m3 s12">
                     <select id="character_name" name="character_name" class="validate" required>
                         <option value="" disabled selected>Choose Character/s</option>
                             {% for character in characters %}
@@ -26,7 +30,7 @@
                 </div>
 
                 <!-- plot -->
-                <div class="input-field col l3 m6 s12">
+                <div class="input-field col m3 m6 s12">
                      <select id="plot_name" name="plot_name" class="validate" required>
                          <option value="" disabled selected>Pick Plot</option>
                             {% for plot in plots %}
@@ -36,7 +40,7 @@
                 </div>
 
                 <!-- resolution -->
-                 <div class="input-field col l3 m6 s12">
+                 <div class="input-field col m3 m6 s12">
                      <select id="resolution_name" name="resolution_name" class="validate" required>
                          <option value="" disabled selected>Choose Resolution</option>
                             {% for resolution in resolutions %}
@@ -46,7 +50,7 @@
                 </div>
             
                 <!-- setting -->
-                 <div class="input-field col l3 m6 s12">
+                 <div class="input-field col m3 m6 s12">
                      <select id="setting_name" name="setting_name" class="validate" required>
                          <option value="" disabled selected>Select Setting</option>
                             {% for setting in settings %}
@@ -157,6 +161,7 @@
                 </div>
             </div>
         </form>
+    </div>
     </div>
 
 
