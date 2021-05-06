@@ -7,6 +7,16 @@ h1, h2 {
     line-height: 0.75em;
 }
 
+.btn-primary {
+    background-color: #4a148c;
+    border-color: #4a148c;
+}
+
+.btn-primary:hover {
+    background-color: #aa00ff;
+    border-color: #aa00ff;
+}
+
 .mono {
     font-family: 'PT Mono', monospace;
     line-height: 1.2em;
