@@ -45,20 +45,20 @@
                     </strong>
                      <p><em>by: {{ story.created_by }}</em></p>
                 </div>
-                <div class="col m3 s12"> 
+                <div class="col m1 s6"> 
                     <strong><em>
                         <p>Featured Cast:</p></em>
                             <!--{% for cast_url in story.cast_url %}
                                 <img class="materialboxed" width="100%" src="{{ story.cast_url }}">
                             {% endfor %}-->
+
                             {% for cast_member in story.cast_members %}
-                            <div class="row">
-                            <div class="col m1 s4">
+                            <div class="col l1 m1 s12">
                                 <p>{{ cast_member.cast_name }}</p>
                                 <img class="materialboxed" width="100px" src="{{ cast_member.cast_url }}" >
                             </div>
-                            </div>
                             {% endfor %}
+
                     </strong>
                 </div>
             </div>
