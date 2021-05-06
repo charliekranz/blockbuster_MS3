@@ -98,13 +98,24 @@
                     Change Cast</h5>
                     {% for cast in casts %}
                         <div class="col s4 m3 l2">
-                        <label class ="cast_url">
+                        <!-- <label class ="cast_url">
+                            <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple  /> -->
+                            <!-- {% for cast_member in cast_members %} 
+                            <img class="materialboxed" width="100%" src="{{ cast_member.cast_url}}">
+                             {% endfor %} -->
+
+                        <!-- </label> -->
+                                                <label class ="cast_url">
                             <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple  />
                             <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
                         </label>
                             <p> 
                                 <label class="cast-name">
-                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple  />
+                                    <!-- {% if cast_member in story.cast_members %} -->
+                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" checked="checked" multiple />
+                                    <!-- {% else %} -->
+                                     <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple />
+                                    <!-- {% endif %}  -->
                                     <span>{{ cast.cast_name }}</span>
                                 </label>
                             </p>
