@@ -94,7 +94,7 @@ def login():
             # username not valid
             flash("Sorry - incorrect Password and/or Username")
             return redirect(url_for("login"))
-
+    
     return render_template("login.html")
 
 
@@ -103,7 +103,7 @@ def profile(username):
     # get session user's username from database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
+    
     if session["user"]:
         return render_template("profile.html", username=username)
 
