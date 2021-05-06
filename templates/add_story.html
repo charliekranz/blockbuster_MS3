@@ -106,22 +106,6 @@
                             <img class="rounded-circle" width="100%" src="{{ cast.cast_url }}">
                         </label>
 
-                            <!--<p> 
-                                <label class="cast-name ">
-                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple class="form-control validate"/>
-                                    <span>{{ cast.cast_name }}</span>
-                                </label>
-                            </p>
-
-                     <div class="checkbox">
-                            <p>
-                                <label class="cast-name">
-                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple class="form-control validate"/>
-                                    <span>{{ cast.cast_name }}</span>
-                                </label>
-                            </p>
-                     </div>--> 
-
                             <div class="checkbox-inline cast-label">
                                 <label><input type="checkbox" value="{{ cast._id }}" name="cast_id" id="cast_id" multiple>
                                   <span>{{ cast.cast_name }}</span>
@@ -132,58 +116,20 @@
                     {% endfor %}
             </div>
 
-
-<!--<div class="row">
-               <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
-                        Select the Cast</h5>
-                <div class="input-field col-12">
-                        <div class="input-field">
-                                <select icons multiple id="cast_name" name="cast_name" class="validate" required>
-                                    <option value="" disabled selected>Cast</option>
-                                    {% for cast in casts %}
-                                        <option value="{{ cast.cast_name }}" data-icon="/images/charlize-theron.jpg" class="left">{{ cast.cast_name }}</option>
-                                    {% endfor %}
-                                </select>-->
-                            <!-- <label for="genre_name">Pick a Genre </label> */ 
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            
-
-            <!--<div class="row">
-                <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
-                    Select the Cast</h5>
-                <div class="input-field">
-                <p>
-                    <label>
-                        <input id="cast_name" name="cast_name" type="radio" class="validate" required>
-                        <span>
-                            {% for cast in casts %}
-                                    <option value="{{ cast.cast_name }}">{{ cast.cast_name }}</option>
-                                {% endfor %}
-                        </span>
-                        </input>
-                        </label>
-                    </label>
-                </p>
-            </div>
-            </div>-->
-
-
-
             <!-- submit button -->
-            <div class="row">
-                <div class="col-s12 center-align">
-                    <button type="submit" class="btn-large purple accent-3 darken-4">
-                        <i class="fas fa-video"></i> Publish
-                    </button>
+
+            <div class="container">
+                <div class="row justify-content-md-center pt-4">
+                    <div class="col-md-6 text-center">
+                        <button type="submit" class="btn-lg btn-primary text-center">
+                            <i class="fas fa-video"></i> Publish
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
     </div>
-    </div>
+</div>
 
 
 {% endblock %}
