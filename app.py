@@ -152,6 +152,13 @@ def add_story():
 @app.route("/edit_story/<story_id>/", methods=["GET", "POST"])
 def edit_story(story_id):
     if request.method == "POST":
+
+        cast_ids = request.form.getlist("cast_id")
+        cast_members = []
+        for cast_id in cast_ids:
+            cast_member = mongo.db.cast.find_one({"_id": ObjectId(cast_id)})
+            cast_members.append(cast_member)
+
         submit = {
             "title_name": request.form.get("title_name"),
             "genre_name": request.form.get("genre_name"),
@@ -159,9 +166,10 @@ def edit_story(story_id):
             "plot_name": request.form.get("plot_name"),
             "resolution_name": request.form.get("resolution_name"),
             "setting_name": request.form.get("setting_name"),
-            "cast_name": request.form.get("cast_name"),
-            "cast_url": request.form.get("cast_url"),
-            "created_by":  session["user"]
+            "created_by":  session["user"],
+
+            "cast_members": cast_members
+
         }
         mongo.db.stories.update({"_id": ObjectId(story_id)}, submit)
         flash("Block+Buster Updated!")
@@ -173,8 +181,7 @@ def edit_story(story_id):
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
     casts = mongo.db.cast.find().sort("cast_name", 1)
-    casturls = mongo.db.cast.find().sort("cast_url", 1)
-    return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts, casturls=casturls)
+    return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
 
 
 @app.route("/delete_story/<story_id>")
