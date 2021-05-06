@@ -11,17 +11,10 @@
         <form class="col s12" method="POST" action="{{ url_for('add_story') }}">
             <h3 class="build-title purple-text"><i class="fas fa-puzzle-piece prefix"></i>
                  Build the Story</h3> 
-            <span class="center-align">
-            <button type="button" value="Randomize" class="btn btn-light btn-sm" onclick="clickme();">
-                <h5 class="purple-button"><i class="fas fa-random"></i> Randomize The Story</h5>
-            </button>
-            </span>
-
-
 
         <div class="row">
         <!-- character -->
-                 <div class="input-field col m3 s12">
+                <div class="input-field col-12 ">
                     <select id="character_name" name="character_name" class="validate form-control" required>
                         <option value="" disabled selected>Choose Character/s</option>
                             {% for character in characters %}
@@ -31,7 +24,7 @@
                 </div>
 
                 <!-- plot -->
-                <div class="input-field col m3 m6 s12">
+                <div class="input-field col-12 ">
                      <select id="plot_name" name="plot_name" class="validate form-control" required>
                          <option value="" disabled selected>Pick Plot</option>
                             {% for plot in plots %}
@@ -41,7 +34,7 @@
                 </div>
 
                 <!-- resolution -->
-                 <div class="input-field col m3 m6 s12">
+                <div class="input-field col-12">
                      <select id="resolution_name" name="resolution_name" class="validate form-control" required>
                          <option value="" disabled selected>Choose Resolution</option>
                             {% for resolution in resolutions %}
@@ -51,7 +44,7 @@
                 </div>
             
                 <!-- setting -->
-                 <div class="input-field col m3 m6 s12">
+                <div class="input-field col-12">
                      <select id="setting_name" name="setting_name" class="validate form-control" required>
                          <option value="" disabled selected>Select Setting</option>
                             {% for setting in settings %}
@@ -60,25 +53,34 @@
                     </select>
                 </div>
 
-            <!-- <button onclick="randomize">Random</button>  -->
-
-            <!--<input type="button" value="Randomize" onclick="clickme();"/>-->
+                <!-- randomize -->
+                <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                            <span>
+                            <button type="button" value="Randomize" class="btn btn-light btn-sm form-control text-center" onclick="clickme();">
+                                <h5 class="purple-button"><i class="fas fa-random"></i> Randomize The Story</h5>
+                            </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
             <!-- title-->
             <div class="row">
                   <div class="form-group col m8 s12">
-                <h5><i class="fas fa-pencil-alt purple-title"></i>
-                    Write the Title</h5>
+                <h3 class="build-title purple-text"><i class="fas fa-pencil-alt purple-title"></i>
+                    Write the Title</h3>
                         <input id="title_name" name="title_name" minlength="3"
                         maxlength="80" type="text" class="input-field form-control validate" required>
                     <!--<label for="title_name">Title of Block+Buster</label>-->
                 </div>
                 <!-- genre -->
                 <div class="input-field col m4 s12">
-                    <h5><i class="fas fa-theater-masks purple-text darken-4"></i> 
-                        Choose a Genre</h5>
+                    <h3 class="build-title purple-text"><i class="fas fa-theater-masks purple-text darken-4"></i> 
+                        Choose a Genre</h3>
                     <div class="input-field">
                             <select id="genre_name" name="genre_name" class="form-control validate" required>
                                 <option value="" disabled selected>Genre</option>
@@ -93,18 +95,18 @@
             <!-- cast -->
 
 
+             <h3 class="text-center purple-text title-text"><i class="fas fa-users prefix purple-text darken-4"></i> 
+                    Select the Cast</h3>
              <div class="row">
-                <h5><i class="fas fa-users prefix purple-text darken-4"></i> 
-                    Select the Cast</h5>
                     {% for cast in casts %}
-                        <div class="col s6 m3 l2">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
                         <label class ="cast_url">
                             <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple  />
                             <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
                         </label>
                             <p> 
-                                <label class="cast-name">
-                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple  />
+                                <label class="cast-name ">
+                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple class="form-control validate"  />
                                     <span>{{ cast.cast_name }}</span>
                                 </label>
                             </p>
