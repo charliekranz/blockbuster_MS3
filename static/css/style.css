@@ -1010,9 +1010,6 @@ h4.big-hero-name {
     padding: 24px 10px 10px 10px;
 }
 
-.form-control {
-    border-radius: 0.33rem;
-}
 
 button, input, optgroup, select, textarea {
     margin: 5px;
@@ -1139,9 +1136,14 @@ button, input, optgroup, select, textarea {
 .form-control {
     font-size: 1.25em;
     color: #4a148c;
-    
 }
 
+@media only screen and (max-width: 540px) {
+.form-control {
+    font-size: .8em;
+
+}
+}
 
 
 
