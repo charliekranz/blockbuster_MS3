@@ -65,6 +65,11 @@ $("#plot_name").formSelect();
 $("#character_name").formSelect();
 }
 
+var $select2 = $('.select2').select2({
+    containerCssClass: "wrap"
+})
+
+
 
 /*
     vanilla JavaScript for MaterializeCSS initialization
