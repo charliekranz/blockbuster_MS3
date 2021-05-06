@@ -90,6 +90,10 @@ hr.purple-thin {
     background-color: #f1f1f1;
 }
 
+.bb-card {
+    background-color: #e3e6f5;
+}
+
 .box-text {
     text-transform: uppercase;
     text-align: center;

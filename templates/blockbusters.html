@@ -40,28 +40,26 @@
                 </div>
             </div>
             <div id="{{ story.title_name }}" class="collapse" data-parent="#accordion">
-                <div class="card-body">
+                <div class="card-body bb-card">
+                    <div class="col-12 col-md-6">
                     <strong><em><h6 class="genre-text purple-text"></em>
                         {{ story.genre_name }}</h6></br>
                         <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }}  {{ story.setting_name }} </h5> 
                     </strong>
                      <p><em>by: {{ story.created_by }}</em></p>
                 </div>
-                <div class="col m1 s6"> 
+                <div class="col-12 col-md-6"> 
                     <strong><em>
                         <p>Featured Cast:</p></em>
-                            <!--{% for cast_url in story.cast_url %}
-                                <img class="materialboxed" width="100%" src="{{ story.cast_url }}">
-                            {% endfor %}-->
 
                             {% for cast_member in story.cast_members %}
-                            <div class="col l2 m2 s12">
+                            <div class="col-4 col-md-2">
+                                <img class="rounded-circle" width="100%" src="{{ cast_member.cast_url }}" >
                                 <p>{{ cast_member.cast_name }}</p>
-                                <img class="materialboxed" width="100px" src="{{ cast_member.cast_url }}" >
                             </div>
                             {% endfor %}
-
                     </strong>
+                    </div>
                 </div>
             </div>
             </div>
