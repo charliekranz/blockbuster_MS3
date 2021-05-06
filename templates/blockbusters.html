@@ -5,24 +5,50 @@
 
     <h3 class="text-center purple-text title-text"><i class="fas fa-ticket-alt"></i> The Block+Busters</h3>
 
-    <div class="row card purple">
+   <!-- <div class="card purple card-padding">
         <div class="body">
-        <form action="{{ url_for('search') }}" method="post" class="col-s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m10">
-                    <i class="fas fa-search prefix purple-text text-darken-4"></i>
-                    <input type="text" name="query" id="query" minlength="2" class="validate" required>
-                    <label for="query">Search Block+Busters by Title, Story or Cast</label>
+            <form action="{{ url_for('search') }}" method="post" class="col-s12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="input-field ">
+                                <i class="fas fa-search prefix purple-text text-darken-4"></i>
+                                <input type="text" name="query" id="query" minlength="2" class="validate" required>
+                                <label for="query">Search Block+Busters by Title, Story or Cast</label>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-search left"></i> Search
+                                </button>
+                                <a href="{{ url_for('get_stories') }}" class="btn btn-secondary"><i class="fas fa-undo left"></i> Clear</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col s12 m4">
-                    <button type="submit" class="purple darken-2 btn">
-                        <i class="fas fa-search left"></i> Search
-                    </button>
-                     <a href="{{ url_for('get_stories') }}" class="orange btn"><i class="fas fa-undo left"></i>Clear</a>
-                </div>
-            </div>
-        </form>
+            </form>
         </div>
+    </div> --> 
+
+    <div class="card purple card-padding">
+     <form action="{{ url_for('search') }}" method="post" class="">
+        <div class="row align-middle">
+                <div class="col-sm-9">
+                     <div class="input-field ">
+                                <i class="fas fa-search prefix purple-text text-darken-4"></i> 
+                                <label for="query">Search Block+Busters by Title, Story or Cast</label>
+
+                                <input type="text" name="query" id="query" minlength="2" class="validate form-control" required>
+                        </div>
+                </div>
+                <div class="col-sm-3 align-middle">
+                    <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-search left"></i> Search
+                                </button>
+                                <a href="{{ url_for('get_stories') }}" class="btn btn-secondary">
+                                    <i class="fas fa-undo left"></i> Clear</a>
+                </div>
+        </div>
+        </form>
     </div>
 
     {% if stories|length > 0 %}
@@ -41,25 +67,28 @@
             </div>
             <div id="{{ story.title_name }}" class="collapse" data-parent="#accordion">
                 <div class="card-body bb-card">
-                    <div class="col-12 col-md-6">
-                    <strong><em><h6 class="genre-text purple-text"></em>
-                        {{ story.genre_name }}</h6></br>
-                        <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }}  {{ story.setting_name }} </h5> 
-                    </strong>
-                     <p><em>by: {{ story.created_by }}</em></p>
-                </div>
-                <div class="col-12 col-md-6"> 
-                    <strong><em>
-                        <p>Featured Cast:</p></em>
-
-                            {% for cast_member in story.cast_members %}
-                            <div class="col-4 col-md-2">
-                                <img class="rounded-circle" width="100%" src="{{ cast_member.cast_url }}" >
-                                <p>{{ cast_member.cast_name }}</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                            <strong><em><h6 class="genre-text purple-text"></em>
+                                {{ story.genre_name }}</h6></br>
+                                <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }}  {{ story.setting_name }} </h5> 
+                            </strong>
+                            <p><em>by: {{ story.created_by }}</em></p>
                             </div>
-                            {% endfor %}
-                    </strong>
+                            <div class="col-12 col-md-6"> 
+                            <strong><em>
+                                <p>Featured Cast:</p></em>
+                                    {% for cast_member in story.cast_members %}
+                                    <div class="col-4 col-md-2">
+                                        <img class="rounded-circle inline-block" width="100%" src="{{ cast_member.cast_url }}" >
+                                        <p>{{ cast_member.cast_name }}</p>
+                                    </div>
+                                    {% endfor %}
+                            </strong>
+                        </div>
                     </div>
+                 </div>
                 </div>
             </div>
             </div>
