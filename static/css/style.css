@@ -31,6 +31,10 @@ h1, h2 {
     color: #4a148c;
 }
 
+.title-white {
+    color: #fff;
+}
+
 /*.nav ul a {
     color: #4a148c;
 }*/
@@ -104,6 +108,10 @@ hr.purple-thin {
 
 .bb-card {
     background-color: #e3e6f5;
+}
+
+.card-header{
+    background-color: #aa00ff;
 }
 
 .box-text {
@@ -270,9 +278,7 @@ hr {
 
 .title-text {
     font-family: 'Anton', sans-serif;
-
 }
-
 
 
 a {
