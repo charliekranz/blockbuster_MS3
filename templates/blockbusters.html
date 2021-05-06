@@ -30,23 +30,23 @@
     </div> --> 
 
     <div class="card purple card-padding">
-     <form action="{{ url_for('search') }}" method="post" class="">
-        <div class="row align-middle">
+        <form action="{{ url_for('search') }}" method="post" class="">
+            <div class="row align-middle">
                 <div class="col-sm-9">
-                     <div class="input-field ">
+                    <div class="input-field ">
                         <input type="text" name="query" id="query" minlength="2" class="validate form-control" placeholder="Search Block+Busters" required>
-                            <i class="fas fa-search prefix purple-text "></i> 
+                             <i class="fas fa-search prefix purple-text "></i> 
                             <label for="query">Search by Title, Story or Cast</label>
-                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-3 align-middle text-center">
-                    <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-search left"></i> Search
-                                </button>
-                                <a href="{{ url_for('get_stories') }}" class="btn btn-secondary">
-                                    <i class="fas fa-undo left"></i> Clear</a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search left"></i> Search
+                        </button>
+                        <a href="{{ url_for('get_stories') }}" class="btn btn-secondary">
+                    <i class="fas fa-undo left"></i> Clear</a>
                 </div>
-        </div>
+            </div>
         </form>
     </div>
 
@@ -56,12 +56,12 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header bb-title" id="" >
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#{{ story.title_name }}"aria-expanded="true" aria-controls="{{ story.title_name }}">
-                            <h3 class="bb-title title-purple">{{ story.title_name }} <!--<i class="fas fa-ticket-alt"></i>--></h3>
-                        </button>
-                        {% if session.user|lower == story.created_by|lower %}
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#{{ story.title_name }}"aria-expanded="true" aria-controls="{{ story.title_name }}">
+                        <h3 class="bb-title title-purple">{{ story.title_name }} <!--<i class="fas fa-ticket-alt"></i>--></h3>
+                    </button>
+                    {% if session.user|lower == story.created_by|lower %}
                         <a href="{{ url_for('edit_story', story_id=story._id) }}" class="btn btn-outline-dark btn-sm" role="button" align-right>Edit</a>
-                        {% endif %}
+                    {% endif %}
                 </div>
             </div>
             <div id="{{ story.title_name }}" class="collapse" data-parent="#accordion">
@@ -69,38 +69,37 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6">
-                            <strong><em><h6 class="genre-text purple-text"></em>
+                                <strong><em><h6 class="genre-text purple-text"></em>
                                 {{ story.genre_name }}</h6></br>
-                                <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }}  {{ story.setting_name }} </h5> 
-                            </strong>
-                            <p><em>by: {{ story.created_by }}</em></p>
+                                <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }} {{ story.setting_name }}</h5> 
+                                </strong>
+                                <p><em>by: {{ story.created_by }}</em></p>
                             </div>
-                            <div class="col-12 col-md-6"> 
-                            <strong><em>
-                                <p>Featured Cast:</p></em>
-                                    {% for cast_member in story.cast_members %}
-                                    <div class="col-4 col-md-2">
-                                        <img class="rounded-circle inline-block" width="100%" src="{{ cast_member.cast_url }}" >
-                                        <p class="cast-label-display">{{ cast_member.cast_name }}</p>
-                                    </div>
-                                    {% endfor %}
-                            </strong>
+                            <div class="col-12 col-md-6 cast-mages"> 
+                                <strong><em><p>Featured Cast:</p></em></strong>
+                                        {% for cast_member in story.cast_members %}
+                                        <div class="col-4 col-md-2">
+                                            <img class="rounded-circle inline-block" width="100%" src="{{ cast_member.cast_url }}" >
+                                            <p class="cast-label-display">{{ cast_member.cast_name }}</p>
+                                        </div>
+                                        {% endfor %}
+                                </strong>
+                            </div>
                         </div>
                     </div>
-                 </div>
                 </div>
             </div>
-            </div>
+        </div>
         {% endfor %}
     </div>
     {% else %}
     <div class="build-card card-padding">
-    <h4 class="purple-text text-center"><i class="fas fa-comment-slash"></i> 
+    <h3 class="purple-text text-center"><i class="fas fa-comment-slash"></i> 
         No Block+Busters Found
     </h3>
-    <p class="purple-text text-center">
-        Try another search.
-    </p>
+        <p class="purple-text text-center">
+            Try another search.
+        </p>
     </div>
     {% endif %}
 

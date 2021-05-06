@@ -117,6 +117,14 @@ hr.purple-thin {
     padding: 16px 4px 16px 4px;
 }
 
+
+
+/* Cast Images */
+
+.cast-images {
+      display: inline-block;
+}
+
 /* Buttons */ 
 .btn-small {
     margin:4px;
