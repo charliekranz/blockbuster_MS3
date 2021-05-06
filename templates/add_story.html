@@ -72,7 +72,7 @@
 
             <!-- title-->
             <div class="row">
-                  <div class="form-group col m8 s12">
+                  <div class="form-group col-12 col-md-8">
                 <h3 class="build-title purple-text"><i class="fas fa-pencil-alt purple-title"></i>
                     Write the Title</h3>
                         <input id="title_name" name="title_name" minlength="3"
@@ -80,7 +80,7 @@
                     <!--<label for="title_name">Title of Block+Buster</label>-->
                 </div>
                 <!-- genre -->
-                <div class="input-field col m4 s12">
+                <div class="input-field col-12 col-md-4">
                     <h3 class="build-title purple-text"><i class="fas fa-theater-masks purple-text darken-4"></i> 
                         Choose a Genre</h3>
                     <div class="input-field">
@@ -99,19 +99,37 @@
 
              <h3 class="text-center purple-text title-text"><i class="fas fa-users prefix purple-text darken-4"></i> 
                     Select the Cast</h3>
+        <hr class="purple-thin">
              <div class="row">
                     {% for cast in casts %}
                         <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
                         <label class ="cast_url">
                             <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple  />
-                            <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
+                            <img class="rounded-circle" width="100%" src="{{ cast.cast_url }}">
                         </label>
-                            <p> 
+
+                            <!--<p> 
                                 <label class="cast-name ">
-                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple class="form-control validate"  />
+                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple class="form-control validate"/>
                                     <span>{{ cast.cast_name }}</span>
                                 </label>
                             </p>
+
+                     <div class="checkbox">
+                            <p>
+                                <label class="cast-name">
+                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple class="form-control validate"/>
+                                    <span>{{ cast.cast_name }}</span>
+                                </label>
+                            </p>
+                     </div>--> 
+
+                            <div class="checkbox-inline cast-label">
+                                <label><input type="checkbox" value="{{ cast._id }}" name="cast_id" id="cast_id" multiple>
+                                  <span>{{ cast.cast_name }}</span>
+                                </label>
+                            </div>
+
                         </div>
                     {% endfor %}
             </div>
