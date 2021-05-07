@@ -134,21 +134,21 @@
 
 
             <!-- buttons -->
-            <div class="row">
+            <div class="row pt-4">
             <!-- delete button -->
              <div class="col text-center">
-                    <a href="{{ url_for('delete_story', story_id=story._id) }}" class="btn-lg btn-danger text-center">
+                    <a href="{{ url_for('delete_story', story_id=story._id) }}" class="btn-lg btn-danger text-center mx-2">
                          <i class="fas fa-trash-alt"></i> Delete
                      </a>
             <!-- cancel button -->
-                    <a href="{{ url_for('get_stories') }}" class="btn-lg btn-secondary text-center">
-                        <i class="fas fa-undo"></i> Cancel Changes 
+                    <a href="{{ url_for('get_stories') }}" class="btn-lg btn-secondary text-center mx-2">
+                        <i class="fas fa-undo"></i> Cancel
                     </a>
                 </div>
             </div> 
                 
             <!-- submit button -->
-            <div class="container">
+            <div class="container pt-4">
                 <div class="row justify-content-md-center">
                     <div class="col-md-6 text-center">
                         <button type="submit" class="btn-lg btn-primary text-center">
@@ -160,29 +160,9 @@
 
 
 
-
-                    <div class="row">
-                            <div class="col text-center">
-                               <a href="{{ url_for('delete_story', story_id=story._id) }}">
-                                   <button class="btn-lg btn-primary text-center">
-                                    <i class="fas fa-trash-alt"></i> Delete
-                                    </button>
-                                </a>
-                            <div class="col text-center">
-                                <button href="{{ url_for('get_stories') }}" class="btn-lg btn-primary text-center">
-                                    <i class="fas fa-undo"></i> Cancel
-                                </button>
-                            <div class="col text-center">
-                                <button type="submit" class="btn-lg btn-primary text-center">
-                                    <i class="fas fa-video"></i> Publish
-                                </button>
-                            </div>
-                    </div>
-
-
         </div>
-        </form>
-    </div>
+    </form>
+</div>
 
 
 {% endblock %}
