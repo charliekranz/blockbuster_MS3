@@ -22,6 +22,10 @@ a:hover {
     line-height: 0.75em;
 }
 
+.white-text {
+    color: #ffffff;
+}
+
 .btn-primary {
     background-color: #4a148c;
     border-color: #4a148c;
