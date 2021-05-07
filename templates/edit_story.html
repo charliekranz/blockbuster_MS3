@@ -84,7 +84,7 @@
                 </div>
                 <!-- genre -->
                 <div class="input-field col-12 col-md-4">
-                    <h3 class="build-title purple-text"></h3><i class="fas fa-theater-masks purple-text"></i> 
+                    <h3 class="build-title purple-text"><i class="fas fa-theater-masks purple-text"></i> 
                         Change Genre</h3>
                     <div class="input-field">
                             <select id="genre_name" name="genre_name" class="form-control validate" required>
@@ -103,26 +103,24 @@
                        <!-- cast -->
                <h3 class="text-center purple-text title-text pt-4"><i class="fas fa-users prefix purple-text"></i> 
                     Change Cast</h3>
+                            <hr class="purple-thin">
+
 
              <div class="row">
 
                     {% for cast in casts %}
-                        <div class="col s4 m3 l2">
-                        <!-- <label class ="cast_url">
-                            <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple  /> -->
-                            <!-- {% for cast_member in cast_members %} 
-                            <img class="materialboxed" width="100%" src="{{ cast_member.cast_url}}">
-                             {% endfor %} -->
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+
 
                         <!-- </label> -->
                         <label class ="cast_url">
                             <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple  />
-                            <img class="materialboxed" width="100%" src="{{ cast.cast_url }}">
+                            <img class="rounded-circle" width="100%" src="{{ cast.cast_url }}">
                         </label>
                             <p> 
                                 <label class="cast-name">
                                     <!-- {% if cast_member in story.cast_members %} -->
-                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" checked="checked" multiple />
+                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" checked="checked" multiple selected />
                                     <!-- {% else %} -->
                                      <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple />
                                     <!-- {% endif %}  -->
