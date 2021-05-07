@@ -69,6 +69,13 @@ var $select2 = $('.select2').select2({
     containerCssClass: "wrap"
 })
 
+/* Trying to limit Cast to 3 using this code but no luck as of yet - http://jsfiddle.net/vVxM2/ */
+var limit = 3;
+$('input.cast-checkbox').on('change', function(evt) {
+   if($(this).siblings(':checked').length >= limit) {
+       this.checked = false;
+   }
+});
 
 
 /*
