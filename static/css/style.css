@@ -26,6 +26,10 @@ a:hover {
     color: #ffffff;
 }
 
+.pink-text {
+    color: #aa00ff;
+}
+
 .btn-primary {
     background-color: #4a148c;
     border-color: #4a148c;
