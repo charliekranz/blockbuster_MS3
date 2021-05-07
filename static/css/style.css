@@ -94,6 +94,19 @@ hr.purple-thin {
     font-weight: 800;
 }
 
+.headline-1 {
+    margin: 1rem 0 1rem;
+    font-weight: 800;
+    font-size: 72px;
+}
+
+.headline-2 {
+    margin: 1rem 0 1rem;
+    font-weight: 800;
+    font-size: 40px;
+
+}
+
 .white-box {
     background-color: #ffffff;
     text-align: center;
