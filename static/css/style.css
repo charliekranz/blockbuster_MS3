@@ -173,6 +173,10 @@ hr.purple-thin {
     padding: 16px 4px 16px 4px;
 }
 
+.img-pad-left {
+    padding-left: 10px;
+}
+
 
 
 /* Cast Images * found very helpful demo for the inline fix*/
