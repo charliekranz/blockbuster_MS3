@@ -117,16 +117,14 @@
                             <input value="{{ cast.cast_url }}" name="cast_url" id="cast_url" type="hidden" multiple  />
                             <img class="rounded-circle" width="100%" src="{{ cast.cast_url }}">
                         </label>
-                            <p> 
-                                <label class="cast-name">
+                                <label class="checkbox-inline cast-label">
                                     <!-- {% if cast_member in story.cast_members %} -->
-                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" checked="checked" multiple selected />
+                                    <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" checked="checked" multiple disabled selected />
                                     <!-- {% else %} -->
                                      <input value="{{ cast._id }}" name="cast_id" id="cast_id" type="checkbox" multiple />
                                     <!-- {% endif %}  -->
                                     <span>{{ cast.cast_name }}</span>
                                 </label>
-                            </p>
                         </div>
                     {% endfor %}
             </div>
