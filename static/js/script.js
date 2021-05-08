@@ -58,11 +58,6 @@ function clickme() {
     $("#plot_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
     $("#character_name")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
 
-
-$("#setting_name").formSelect();
-$("#resolution_name").formSelect();
-$("#plot_name").formSelect();
-$("#character_name").formSelect();
 }
 
 /* var $select2 = $('.select2').select2({
