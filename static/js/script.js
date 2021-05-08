@@ -64,11 +64,13 @@ function clickme() {
     containerCssClass: "wrap"
 }) */
 
-/* Trying to limit Cast to 3 using this code but no luck as of yet - http://jsfiddle.net/vVxM2/ */
+/* Limit Cast to 3 using code found here - http://jsfiddle.net/vVxM2/ and syntax tweaked with assistance of 
+Ronan to target cast-checkbox correctly and call modal */
 
 var limit = 3;
-$('input.cast-checkbox').on('change', function(evt) {
-   if($(this).siblings(':checked').length >= limit) {
+$('.cast-checkbox').on('change', function(evt) {
+   if($('.cast-checkbox:checked').length > limit) {
+       $('#limitModal').modal("show")
        this.checked = false;
    }
 });
