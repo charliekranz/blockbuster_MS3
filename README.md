@@ -1,19 +1,6 @@
 
 
-RandomKeygen for random [https://randomkeygen.com/]
 
-mongoDB
-heroku
-materialise
-jquery
-fontawesome
-werkzeug
-
-using hover (akragas)
-popper and slim min
-fancybox
-
-getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
 
 randomize additional tweaks - https://jsfiddle.net/aqpwcoju/1/
 https://stackoverflow.com/questions/30341095/change-value-of-materialize-select-box-by-jquery
@@ -173,6 +160,29 @@ In addition, you may also use this section to discuss plans for additional featu
 
 - Another feature idea
 
+
+## Technologies used
+
+
+mongoDB
+heroku
+materialise
+jquery
+fontawesome
+werkzeug
+
+using hover (akragas)
+popper and slim min
+fancybox
+
+
+## Code used
+
+RandomKeygen for random [https://randomkeygen.com/]
+getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
+
+
+
 ## Testing 
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
@@ -193,7 +203,14 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Unfixed Bugs
 
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 
+- Chosen cast_members not appearing on edit page
+- Edit not saving cast_member input
+- Need to limit cast innput at 3 - have tried a js impelementation but not owrking
+- Accordion on blockbusters page unable to target stories properly - spaces and/or a number at start of title_name causes issues so I want to targey story ObjectId instead
+- Need to paginate blockbusters.html (at 30?)
+- would like to add defensive Delete Blockbuster syep
+
+
 
 ## Deployment
 
