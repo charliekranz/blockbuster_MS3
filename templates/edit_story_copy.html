@@ -79,20 +79,19 @@
                 <h3 class="build-title purple-text"><i class="fas fa-pencil-alt purple-title"></i>
                     Edit the Title</h3>
                         <input id="title_name" name="title_name" minlength="3"
-                        maxlength="80" value="{{ story.title_name }}" type="text" class=" input-field form-control validate" required >
+                        maxlength="80" value="{{ story.title_name }}" type="text" class=" input-field form-control validate" required>
                     <!--<label for="title_name">Title of Block+Buster</label>-->
                 </div>
                 <!-- genre -->
-                <div class="col-12 col-md-4">
+                <div class="input-field col-12 col-md-4">
                     <h3 class="build-title purple-text"><i class="fas fa-theater-masks purple-text"></i> 
                         Change Genre</h3>
                     <div class="input-field">
                             <select id="genre_name" name="genre_name" class="validate form-control " required>
                                 <option value="" disabled>Genre</option>
                                 {% for genre in genres %}
+                                    <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option> 
                                     {% if genre.genre_name == story.genre_name %}
-                                    <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option>
-                                    {% else %}
                                         <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
                                     {% endif %}
                                 {% endfor %}
