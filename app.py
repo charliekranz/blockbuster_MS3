@@ -169,7 +169,7 @@ def edit_story(story_id):
             "setting_name": request.form.get("setting_name"),
             "created_by":  session["user"],
 
-            "cast_members": request.form.getlist("cast_members")
+            "cast_members": cast_members
 
         }
         mongo.db.stories.update({"_id": ObjectId(story_id)}, submit)
