@@ -1,14 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <div class="col s12 m12 offset-m0" >
-             <div class="row card bb-card card-padding col-8 offset-2">
-                    <h3 class="text-center purple-text title-text">
-                    {{ username }}'s Profile
-                </h3>
+<h3 class="text-center purple-text title-text"><i class="fas fa-user-circle"></i> My Block+Busters</h3>
+
+<!-- Blockbuster Loop-->
+    {% if stories|length > 0 %}
+    <div id="accordion">
+        {% for story in stories %}
+            {% if session.user|lower == story.created_by|lower %}            
+        <div class="container-fluid pt-1">
+            <div class="row card">
+                <div class="card-header bb-title" id="" >
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#BB{{ story._id }}" aria-expanded="true" aria-controls="BB{{ story._id  }}">
+                        <h3 class="bb-title title-white"><i class="fas fa-ticket-alt purple-text fa-lg"></i>&nbsp;
+                            {{ story.title_name }}</h3>
+                                       
+
+                    </button>
+
+                        <a href="{{ url_for('edit_story', story_id=story._id) }}" class="btn btn-outline-light btn-sm" role="button" align-right>Edit</a>
+                </div>
+            </div>
+            <div id="BB{{ story._id  }}" class="collapse" data-parent="#accordion">
+                <div class="card-body bb-card">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-7">
+                                <strong><em><h6 class="genre-text purple-text"></em>
+                                {{ story.genre_name }}</h6></br>
+                                <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }} {{ story.setting_name }}</h5> 
+                                </strong>
+                                <p><em>by: {{ story.created_by }}</em></p>
+                            </div>
+                            <div class="col cast-images"> 
+                               <strong><em><p>Featured Cast:</p></em></strong></br>
+                                        {% for cast_member in story.cast_members %}
+                                        <div class="col-4 col-sm-3 cast-images text-center">
+                                            <img class="rounded-circle inline-block" width="100%" src="{{ cast_member.cast_url }}" >
+                                            <p class="cast-label-display text-center pt-1">{{ cast_member.cast_name }}</p>
+                                            </div>
+                                        {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 {% endblock %}

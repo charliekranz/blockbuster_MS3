@@ -38,12 +38,8 @@
                 <div class="card-header bb-title" id="" >
                     <button class="btn btn-link" data-toggle="collapse" data-target="#BB{{ story._id }}" aria-expanded="true" aria-controls="BB{{ story._id  }}">
                         <h3 class="bb-title title-white"><i class="fas fa-ticket-alt purple-text fa-lg"></i>&nbsp;
-                            {{ story.title_name }} <!--<i class="fas fa-ticket-alt"></i>--></h3>
+                            {{ story.title_name }}</h3>
                                        
-                                        <!--{% for cast_member in story.cast_members %}
-                                        <img class="rounded-circle inline-block" width="80px" src="{{ cast_member.cast_url }}" >
-                                        {% endfor %}
-                                         </div>-->
 
                     </button>
                     {% if session.user|lower == story.created_by|lower %}

@@ -41,12 +41,14 @@
                                 <a class="nav-link hvr-sweep-to-bottom" href="{{ url_for('get_stories') }}">
                                     <i class="fas fa-film fa-lg"></i> Browse</a></li>
                             {% if session.user %}
-                                <!--<li><a href="{{ url_for(
-                                    'profile', username=session['user']) }}"><i class="fas fa-user-circle fa-lg"></i> Profile</a></li>-->
                             <li class="nav-item">
                                 <a class="nav-link hvr-sweep-to-bottom" href="{{ url_for('add_story') }}">
                                     <i class="fas fa-video fa-lg"></i> Build</a></li>
                             <li class="nav-item">
+                                <a class="nav-link hvr-sweep-to-bottom" href="{{ url_for(
+                                    'profile', username=session['user']) }}"><i class="fas fa-user-circle fa-lg"></i> 
+                                    MyBB</a></li>                            
+                                    <li class="nav-item"> 
                                 <a class="nav-link hvr-sweep-to-bottom" href="{{ url_for('logout') }}">
                                     <i class="fas fa-sign-out-alt fa-lg"></i> Logout</a></li>
                             {% else %}
