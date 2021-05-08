@@ -65,9 +65,9 @@ $("#plot_name").formSelect();
 $("#character_name").formSelect();
 }
 
-var $select2 = $('.select2').select2({
+/* var $select2 = $('.select2').select2({
     containerCssClass: "wrap"
-})
+}) */
 
 /* Trying to limit Cast to 3 using this code but no luck as of yet - http://jsfiddle.net/vVxM2/ */
 
@@ -77,6 +77,12 @@ $('input.cast-checkbox').on('change', function(evt) {
        this.checked = false;
    }
 });
+
+/* Modal from Bootstrap */
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
 
 
 /*

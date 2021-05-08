@@ -185,6 +185,8 @@ getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-a
 
 ## Testing 
 
+- Accordion on blockbusters page were initially unable to target stories properly. Titles with spaces and/or a number at the start of title_name caused issues. Fixed by using ObjectId instead and adding a character to the start (BB).
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
@@ -206,7 +208,6 @@ If this section grows too long, you may want to split it off into a separate fil
 - Chosen cast_members not appearing on edit page
 - Edit not saving cast_member input
 - Need to limit cast innput at 3 - have tried a js impelementation but not owrking
-- Accordion on blockbusters page unable to target stories properly - spaces and/or a number at start of title_name causes issues so I want to targey story ObjectId instead
 - Need to paginate blockbusters.html (at 30?)
 - would like to add defensive Delete Blockbuster syep
 
