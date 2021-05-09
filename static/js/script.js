@@ -31,8 +31,8 @@ $('.cast-checkbox').on('change', function(evt) {
 
 /* Using code and adapting to show modal if no cast chosen  https://www.sitepoint.com/jquery-check-checkbox-checked/ */
 
-if ($('input[name=cast-checkbox]').attr('checked') != false) {
-	$('#minModal').modal("show");
+if ($('input[name=cast-checkbox]').attr('checked') != true) {
+	$('#minModal').modal("hide");
 }
 
 
@@ -49,3 +49,15 @@ $('.cast-checkbox').on('change', function(evt) {
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 });
+
+/* $(function() {
+  $('#Alpha').on("submit", function() {
+    if ($('input[name=cast-checkbox]').attr('checked') != false) {
+	$('#minModal').modal("show");
+      return false;
+    } else {
+      submit;
+      return true;
+    }
+  });
+}); */

@@ -18,19 +18,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-def contact():
-    if request.method == 'POST':
-        if request.form['submit_button'] == 'Do Something':
-            pass # do something
-        elif request.form['submit_button'] == 'Do Something Else':
-            pass # do something else
-        else:
-            pass # unknown
-    elif request.method == 'GET':
-        return render_template('contact.html', form=form)
-
-
-
 @app.route("/")
 @app.route("/home")
 def home():
@@ -163,7 +150,6 @@ def add_story():
     genres = mongo.db.genres.find().sort("genre_name", 1)
     casts = mongo.db.cast.find().sort("cast_name", 1)
     return render_template("add_story.html", genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
-
 
 
 @app.route("/edit_story/<story_id>/", methods=["GET", "POST"])
