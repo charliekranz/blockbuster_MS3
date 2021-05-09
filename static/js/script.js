@@ -31,8 +31,13 @@ $('.cast-checkbox').on('change', function(evt) {
 
 /* Using code and adapting to show modal if no cast chosen  https://www.sitepoint.com/jquery-check-checkbox-checked/ */
 
+var el = document.getElementById("checkcast");
 if ($('input[name=cast-checkbox]').attr('checked') != true) {
-	$('#minModal').modal("hide");
+    document.getElementById("form").submit();  
+    }
+else {
+    $('#minModal').modal("show");  
+    }
 }
 
 
