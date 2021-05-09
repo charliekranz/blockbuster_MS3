@@ -64,7 +64,27 @@
                                     <h4 class="text-center white-text">
                                         View the Collection
                                     </h4>
-
+                                    {% if session.user %}
+                                    <div class="container">
+                                        <div class="row justify-content-md-center pt-4">
+                                            <div class="col text-center">
+                                                <a href="{{ url_for('get_stories') }}" >
+                                                    <button class="btn-lg btn-primary-2 text-center">
+                                                        <i class="fas fa-film"></i> Browse
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col text-center">
+                                            <a href="{{ url_for('profile') }}">
+                                              <button class="btn-lg btn-primary-2 text-center">
+                                                <i class="fas fa-toiket-alt"></i> MyBB
+                                            </button>
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
                                     <div class="container">
                                         <div class="row justify-content-md-center pt-4">
                                             <div class="col-md-6 text-center">
