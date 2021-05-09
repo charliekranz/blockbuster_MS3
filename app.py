@@ -185,7 +185,7 @@ def edit_story(story_id):
     settings = mongo.db.setting.find().sort("setting_name", 1)
     genres = mongo.db.genres.find().sort("genre_name", 1)
     casts = mongo.db.cast.find().sort("cast_name", 1)
-    return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts,)
+    return render_template("edit_story.html", story=story, genres=genres, characters=characters, plots=plots, resolutions=resolutions, settings=settings, casts=casts)
 
 
 @app.route("/delete_story/<story_id>")
