@@ -151,12 +151,12 @@
                     </div>
                 </div>
 
-            <!-- buttons -->
+                <!-- buttons -->
                 <div class="row pt-4"></div>
                     <!-- Delete Button -->
-                        <button type="button" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#deleteModal">
-                        <i class="fas fa-trash-alt"></i> Delete
-                        </button>
+                    <button type="button" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#deleteModal">
+                    <i class="fas fa-trash-alt"></i> Delete
+                    </button>
 
                     <!-- cancel button -->
                         <div class="col">
@@ -164,7 +164,6 @@
                                 <i class="fas fa-undo"></i> Cancel
                             </a>
                         </div>
-                    </div> 
                         
                     <!-- submit button -->
                     <div class="container pt-4">
@@ -198,17 +197,14 @@
                                         <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal"><i class="fas fa-undo"></i> Cancel</button>
                                         <a href="{{ url_for('delete_story', story_id=story._id) }}" class="btn-lg btn-danger text-center mx-2">
                                         <i class="fas fa-trash-alt"></i> Delete</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>        
-                </div>
-            </div>    
-        </div>
-    </form>
-</div>
+                 </form>
+             </div>
+    </div>
 
 
 {% endblock %}
