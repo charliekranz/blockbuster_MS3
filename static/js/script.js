@@ -1,47 +1,3 @@
-/*
-    jQuery for MaterializeCSS initialization
-*/
-
-/*$(document).ready(function () {
-    $(".sidenav").sidenav({edge: "right"});
-    $(".collapsible").collapsible();
-    $("select").formSelect();
-    $('.materialboxed').materialbox();
-
- 
-    /* Dropdown Validation code from Code Institute Task Master Project */
-    /*validateMaterializeSelect();
-    function validateMaterializeSelect() {
-        let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 2px 0 0 #aa00ff" };
-        let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 2px 0 0 #ff0000" };
-        if ($("select.validate").prop("required")) {
-            $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
-        }
-        $(".select-wrapper input.select-dropdown").on("focusin", function () {
-            $(this).parent(".select-wrapper").on("change", function () {
-                if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
-                    $(this).children("input").css(classValid);
-                }
-            });
-        }).on("click", function () {
-            if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(0, 0, 0, 0.03)") {
-                $(this).parent(".select-wrapper").children("input").css(classValid);
-            } else {
-                $(".select-wrapper input.select-dropdown").on("focusout", function () {
-                    if ($(this).parent(".select-wrapper").children("select").prop("required")) {
-                        if ($(this).css("border-bottom") != "2px solid rgb(76, 175, 80)") {
-                            $(this).parent(".select-wrapper").children("input").css(classInvalid);
-                        }
-                    }
-                });
-            }
-        });
-    }
-});
-
-/*
-   Radomize code put together using  https://jsfiddle.net/aqpwcoju/1/ and hint from friend regarding Materialize dropdown targettting - https://stackoverflow.com/questions/30341095/change-value-of-materialize-select-box-by-jquery
-*/
 
 var minNumber = 1;
 var maxNumber = 20;
@@ -66,6 +22,15 @@ function clickme() {
 
 /* Limit Cast to 3 using code found here - http://jsfiddle.net/vVxM2/ and syntax tweaked with assistance of 
 Ronan to target cast-checkbox correctly and call modal */
+
+var min = 1;
+$('.cast-checkbox').on('change', function(evt) {
+   if($('.cast-checkbox:checked').length < min) {
+       $('#minModal').modal("show")
+       this.checked = false;
+   }
+});
+
 
 var limit = 3;
 $('.cast-checkbox').on('change', function(evt) {
