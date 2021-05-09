@@ -211,11 +211,8 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Unfixed Bugs
 
-- Chosen cast_members not appearing on edit page
-- Edit not saving cast_member input
-- Need to limit cast innput at 3 - have tried a js impelementation but not owrking
+- Register on iOS hanges between username and password entry
 - Need to paginate blockbusters.html (at 30?)
-- would like to add defensive Delete Blockbuster syep
 
 
 
