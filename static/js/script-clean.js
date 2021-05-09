@@ -20,20 +20,13 @@ function clickme() {
 Ronan to target cast-checkbox correctly and call modal */
 
 
-/*var min = 1;
+var min = 1;
 $('.cast-checkbox').on('change', function(evt) {
    if($('.cast-checkbox:checked').length < min) {
        $('#minModal').modal("show")
        this.checked = false;
    }
-});*/
-
-
-/* Using code and adapting to show modal if no cast chosen  https://www.sitepoint.com/jquery-check-checkbox-checked/ */
-
-if ($('input[name=cast-checkbox]').attr('checked') != false) {
-	$('#minModal').modal("show");
-}
+});
 
 
 var limit = 3;
