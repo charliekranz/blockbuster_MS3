@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, redirect, 
+    Flask, flash, render_template, redirect,
     request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -92,7 +92,7 @@ def login():
             # username not valid
             flash("Sorry - incorrect Password and/or Username")
             return redirect(url_for("login"))
-    
+
     return render_template("login.html")
 
 
@@ -103,7 +103,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     stories = list(mongo.db.stories.find())
-    
+
     if session["user"]:
         return render_template("profile.html", username=username, stories=stories)
 
