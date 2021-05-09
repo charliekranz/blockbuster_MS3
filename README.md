@@ -159,9 +159,8 @@ In addition, you may also use this section to discuss plans for additional featu
 ### Features Left to Implement
 
 - Paginate ?
-- Minimum cast 1 modal and update text on add and edit templates
+- Heroku delay on register for iOS?
 - re-index db to include username and update text on search 
-- fix edit buttton divs (at bottom of page)
 - re-populate the BBs with proper data
 - validate / readme and screengrabs, etc
 
