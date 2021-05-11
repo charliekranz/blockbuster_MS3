@@ -51,6 +51,7 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
     - PT Mono monospace font for some featured text sections - to evoke the typewriter feel of a screenplay writer
     - Sans Serif for body and smaller text
 
+
 ## Features  (Yet to finish)
 
 ### Existing Features
@@ -63,15 +64,53 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
     - Logged-out Users will see the Login and Register options (Logout and Build will be hidden)
 
 
-![Nav Bar](url)
-
 - __Home Page__
 
   - TBC 
   - TBC 
 
 
-![Browse Page](url)
+- __Browse Page__
+
+  - TBC 
+  - TBC  
+
+
+- __MyBB Page__
+
+  - TBC 
+  - TBC  
+
+
+- __Build Page__
+
+  - TBC 
+  - TBC  
+
+
+- __Edit Page__
+
+  - TBC 
+  - TBC 
+
+
+- __Login Page__
+
+  - TBC 
+  - TBC  
+
+
+- __Logout Page__
+
+  - TBC 
+  - TBC  
+
+
+- __Register Page__
+
+  - TBC 
+  - TBC  
+
 
 - __About Page__
 
@@ -79,72 +118,26 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
   - TBC  
 
 
-![MyBB Page](url)
+- __Modals__
 
-- __About Page__
+    -
 
-  - TBC 
-  - TBC  
-
-![Build Page](url)
-
-
-- __About Page__
-
-  - TBC 
-  - TBC  
-
-![Edit Page](url)
-
-
-- __About Page__
+- __Footer__
 
   - TBC 
   - TBC 
-
-
-![Login Page](url)
-
-- __About Page__
-
-  - TBC 
-  - TBC  
-
-
-![Logout Page](url)
-
-- __About Page__
-
-  - TBC 
-  - TBC  
-
-
-![Register Page](url)
-
-- __About Page__
-
-  - TBC 
-  - TBC  
-
-
-![About Page](url)
-
-- __About Page__
-
-  - TBC 
-  - TBC  
-
-![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
 
 
 ### Features Left to Implement
 
-- Paginate ?
-- 
-- re-index db to include username and update text on search 
-- re-populate the BBs with proper data
-- validate / readme and screengrabs, etc
-- disclaimer about removing od BB content occassionally
+- Paginate - would like to Paginate every 30 Blockbusters
+- Re-index db to include username which would allow users to search by usernames
+- Username search functionality would also allow me to use Jinga templating to give users a "Share your BBs" link atop MyBB page
+- My friend Ronan mentioned a Python library that allows for pluralisation of text, which I'd like to invstigate. Failing that some more complex programming to use appropriate singular and/or plural string for story sections.
+- Possibly add option for people to suggest Block+Buster story content, movies to use as inspiration or new actors to cast section
+- An age-range sort function for actors
+- Twitter and Facebook share options (possibly)
+- Would like to add a disclaimer about removing old BB content occassionally
 
 
 
@@ -157,7 +150,7 @@ materialise
 jquery
 fontawesome
 werkzeug
-
+Jinga
 using hover (akragas)
 popper and slim min
 fancybox
@@ -197,6 +190,7 @@ fancybox
 ### Unfixed Bugs  (Yet to finish)
 
 - Heroku delay on register for iOS?
+- Title is not suppressing 50+ character titles
 
 
 
