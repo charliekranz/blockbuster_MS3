@@ -144,6 +144,8 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 - re-index db to include username and update text on search 
 - re-populate the BBs with proper data
 - validate / readme and screengrabs, etc
+- disclaimer about removing od BB content occassionally
+
 
 
 ## Technologies used 
