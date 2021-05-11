@@ -47,9 +47,9 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
     - Smaller screens use 1-column layout throughout and some font-size reduction
 
 - #### Typography
-    - Poppins font for bolder, larger text
-    - Open Sans for body and smaller text
-    - Sans Serif as the fallback
+    - Anton font formore compressed Block+Buster+Builder branded text
+    - PT Mono monospace font for some featured text sections - to evoke the typewriter feel of a screenplay writer
+    - Sans Serif for body and smaller text
 
 ## Features 
 
@@ -72,6 +72,14 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
 
 ![Browse Page](url)
+
+- __About Page__
+
+  - TBC 
+  - TBC  
+
+
+![MyBB Page](url)
 
 - __About Page__
 
@@ -128,27 +136,11 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
 ![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
 
-- __Gallery__
-
-  - The gallery will provide the user with supporting images to see what the meet ups look like. 
-  - This section is valuable to the user as they will be able to easily identify the types of events the organisation puts together. 
-
-![Gallery](https://github.com/lucyrush/readme-template/blob/master/media/love_running_gallery.png)
-
-- __The Sign Up Page__
-
-  - This page will allow the user to get signed up to Love Running to start their running journey with the community. The user will be able specify if they would like to take part in road, trail or both types of running. The user will be asked to submit their full name and email address. 
-
-![Sign Up](https://github.com/lucyrush/readme-template/blob/master/media/love_running_signup.png)
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
 
 - Paginate ?
-- Heroku delay on register for iOS?
+- 
 - re-index db to include username and update text on search 
 - re-populate the BBs with proper data
 - validate / readme and screengrabs, etc
@@ -167,12 +159,6 @@ werkzeug
 using hover (akragas)
 popper and slim min
 fancybox
-
-
-## Code used
-
-RandomKeygen for random [https://randomkeygen.com/]
-getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
 
 
 
@@ -202,10 +188,10 @@ If this section grows too long, you may want to split it off into a separate fil
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
 
+
 ### Unfixed Bugs
 
-- Register on iOS hangs between username and password entry
-- Need to paginate blockbusters.html (at 30?)
+- Heroku delay on register for iOS?
 
 
 
@@ -223,14 +209,13 @@ The live link can be found here - https://code-institute-org.github.io/love-runn
 
 ## Credits 
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-
-You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
 ### Content 
 
 - Icons used throughout the website are from [Font Awesome](https://fontawesome.com/)
 - randomize additional tweaks - https://jsfiddle.net/aqpwcoju/1/
+RandomKeygen for random [https://randomkeygen.com/]
+getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
+
 
 
 ### Media
