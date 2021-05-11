@@ -143,6 +143,16 @@ hr.purple-thin {
     font-size: 1.75em;
     text-align: center;
     font-weight: 800;
+    width: -webkit-fill-available;
+    /* font-family: 'Anton', sans-serif; */
+}
+
+.bb-title-left {
+    text-transform: uppercase;
+    font-size: 1.75em;
+    text-align: left;
+    font-weight: 800;
+    width: -webkit-fill-available;
     /* font-family: 'Anton', sans-serif; */
 }
 
