@@ -138,11 +138,24 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 - An age-range sort function for actors
 - Twitter and Facebook share options (possibly)
 - Would like to add a disclaimer about removing old BB content occassionally
+- Might allow for longer titles and force linebreak/wrap if no space before end of BB accordion
 
 
 
 ## Technologies used 
 
+* HTML and CSS programming languages
+* [Balsamiq](https://balsamiq.com/) - wireframing tool
+* [Slack](https://slack.com/) - networking and communications
+* [GitHub](https://github.com/) - code repository
+* [GitPod](https://www.gitpod.io/) - cloud dev environment
+* [Bootstrap](https://getbootstrap.com/) - responsive sourcetoolkit with components and Javascipt plugins
+* [fontawesome](https://fontawesome.com/v4.7.0/) - vector icons customisable through CSS
+* [Google Fonts](https://fonts.google.com/) - open source web font collection
+* [Google Places API](https://cloud.google.com/maps-platform/places/) - to access and retrieve results data from Google's millions of Place Locations
+* [Google Maps API](http://cloud.google.com/maps-platform/) - to display map
+* [Google Developer](https://console.developers.google.com/) - to access Google APIs
+* [jQuery](https://jquery.com/) - add state to button
 
 mongoDB
 heroku
@@ -190,8 +203,6 @@ fancybox
 ### Unfixed Bugs  (Yet to finish)
 
 - Heroku delay on register for iOS?
-- Title is not suppressing 50+ character titles
-
 
 
 ## Deployment (Yet to finish)
