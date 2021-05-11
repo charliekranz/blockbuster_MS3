@@ -48,7 +48,7 @@ $('.cast-checkbox').on('change', function(evt) {
 var limit = 3;
 $('.cast-checkbox').on('change', function(evt) {
    if($('.cast-checkbox:checked').length > limit) {
-       $('#limitModal').modal("show")
+       $('#limitModal').modal("show");
        this.checked = false;
    }
 });
@@ -56,7 +56,7 @@ $('.cast-checkbox').on('change', function(evt) {
 /* Modal from Bootstrap */
 
 $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
+  $('#myInput').trigger('focus');
 });
 
 /* $(function() {
