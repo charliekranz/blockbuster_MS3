@@ -130,6 +130,7 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
 ### Features Left to Implement
 
+- Allow users to recover password
 - Paginate - would like to Paginate every 30 Blockbusters
 - Re-index db to include username which would allow users to search by usernames
 - Username search functionality would also allow me to use Jinga templating to give users a "Share your BBs" link atop MyBB page
