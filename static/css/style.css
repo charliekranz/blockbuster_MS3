@@ -104,6 +104,14 @@ hr.purple-thin {
     font-size: 72px;
 }
 
+@media only screen and (max-width: 480px) {
+.headline-1 {
+    margin: 1rem 0 1rem;
+    font-weight: 800;
+    font-size: 55px;
+}
+}
+
 .headline-2 {
     margin: 1rem 0 1rem;
     font-weight: 800;
