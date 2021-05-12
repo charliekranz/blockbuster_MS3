@@ -1,3 +1,5 @@
+/*--------------------------------------------------------    Text  */
+
 h1, h2 {
     font-family: 'Anton', sans-serif;
 }
@@ -29,360 +31,12 @@ a:hover {
     color: #aa00ff;
 }
 
-.btn-primary {
-    background-color: #4a148c;
-    border-color: #4a148c;
-}
-
-.btn-primary:hover {
-    background-color: #aa00ff;
-    border-color: #aa00ff;
-}
-
-.btn-primary-2 {
-    background-color: #4a148c;
-    border-color: #4a148c;
-    color: #fff;
-}
-
-.btn-primary-2:hover {
-    background-color: #fff;
-    border-color: #fff;
-    color: #4a148c;
-}
-
-.mono {
-    font-family: 'PT Mono', monospace;
-    line-height: 1.2em;
-    font-size: 1.2em;
-}
-
-.text-shadow {
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65)
-}
-
-.title-purple {
-    color: #4a148c;
-}
-
-.title-white {
-    color: #fff;
-}
-
-/*.nav ul a {
-    color: #4a148c;
-}*/
-
-.nav {
-  background-color: #ffffff !important;
-}
-
-hr.purple-bold {
-    border: 1px solid #4a148c;
-    margin-top: 0.5em;
-}
-
-hr.purple-light {
-    border: 1px solid #4a148c;
-}
-
-hr.purple-thin {
-    border: 0.1em solid #4a148c;
-    margin-top: 0.25em;
-
-}
-
-.headline {
-    margin: 1rem 0 1rem;
-    font-weight: 800;
-}
-
-.headline-1 {
-    margin: 1rem 0 1rem;
-    font-weight: 800;
-    font-size: 72px;
-}
-
-@media only screen and (max-width: 480px) {
-.headline-1 {
-    margin: 1rem 0 1rem;
-    font-weight: 800;
-    font-size: 55px;
-}
-}
-
-.headline-2 {
-    margin: 1rem 0 1rem;
-    font-weight: 800;
-    font-size: 40px;
-
-}
-
-.white-box {
-    background-color: #ffffff;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.flashed h5 {
-    padding: 0.5em;
-    line-height: 1.2;
-    font-size: 1.6em;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    color: #aa00ff ;
-    text-align: center!important;
-}
-
-.icon-space {
-    padding-bottom: 0.5em;
-}
-
-.border-solid {
-    border-style: solid;
-    border-color:#aa00ff;
-    border-width: 0.1em;
-    line-height: 2em;
-}
-
-.bb-title {
-    text-transform: uppercase;
-    font-size: 1.75em;
-    text-align: center;
-    font-weight: 800;
-    width: -webkit-fill-available;
-    /* font-family: 'Anton', sans-serif; */
-}
-
-.bb-title-left {
-    text-transform: uppercase;
-    font-size: 1.75em;
-    text-align: left;
-    font-weight: 800;
-    width: -webkit-fill-available;
-    /* font-family: 'Anton', sans-serif; */
-}
-
-@media only screen and (max-width: 540px) {
-.bb-title {
-    font-size: 1.3em;
-}
-}
-
-@media only screen and (max-width: 450px) {
-.bb-title {
-    font-size: 1.1em;
-}
-}
-
-.build-title {
-    font-family: 'Anton', sans-serif;
-    line-height: 1.5;
-}
-
-.build-card {
-    background-color: #f1f1f1;
-}
-
-.edit-card {
-    background-color: #cde4f1 ;
-}
-
-.bb-card {
-    background-color: #e3e6f5;
-}
-
-.card-header{
-    background-color: #aa00ff;
-}
-
-.box-text {
-    text-transform: uppercase;
-    text-align: center;
-    vertical-align: middle;
-    color: #aa00ff;
-    font-size: 1.75em;
-    font-weight: 800;
-    line-height: 1em;
-    padding: 16px 4px 16px 4px;
-}
-
-.img-pad-left {
-    padding-left: 10px;
-}
-
-
-
-/* Cast Images * found very helpful demo for the inline fix*/
-.cast-images > * {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-/* Buttons */ 
-.btn-small {
-    margin:4px;
-}
-
-.purple-button {
-    color: #aa00ff;
-
-}
-
-.collapsible-header .col .strong {
-    margin: 4px;
-    line-height: 40px;
-}
-
-.genre-text {
-    text-transform: uppercase;
-    text-decoration-line: underline;
-}
-
-.cast-label {
-    line-height: 1.2em;
-    font-size: 1.2em;
-    padding-bottom: 0.5em;
-    color: #636363;
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-}
-
-
-.cast-label-display {
-    line-height: 1.2em;
-    font-size: 1.1em;
-    padding-bottom: 0.5em;
-    color: #636363;
-    text-align: left;
-}
-
-.checkbox {
-   
-}
-
-.dropdown-content li>a, .dropdown-content li>span {
-    font-size: 16px;
-    /* color: #4a148c; */
-    display: block;
-    line-height: 22px;
-    padding: 14px 16px;
-}
-
-.footer-content {
-    height: 100vh;
-    background-color: #4a148c;
-}
-
-.dropdown-content {
-    white-space: normal;
-}
-
-
-/* Cards  */
-
-.card-padding {
-    padding: 1.5em;
-}
-
-
-/*
-.select-wrapper {
-    
-}
-
-.select-dropdown .dropdown-trigger {
-
-}
-*/
-
-
-/*--------------------------------------------------------  General */
-
-.inline-block {
-    display: inline-block;
-}
-
-.flex-container {
-    display: flex;
-}
-
-div.inline { 
-    float:left;
-}
-
-.clearBoth {
-    clear:both;
-}
-
-hr {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(179, 18, 48, 0.74);
-}
-
-/*-------------------------------------------------------- Colours */
-
-.red {
-    color: #660012;
-}
-
-.grey {
-    color: #505050;
-}
-
-.white {
-    color: #fff;
-}
-
-.blue {
-    color: #0A4B66;
-}
-
-.lt-blue {
-    color: #73aecf;
-}
-
-.lt-grey {
-    color: #efefef;
-}
-
-.bright-red {
-    color: #f8123c;
-}
-
-.mid-red {
-    color:#b3122f;
-}
-
-/*-------------------------------------------------------- Fonts */
-
 .purple-text {
     color: #4a148c;
 }
 
 .title-text {
     font-family: 'Anton', sans-serif;
-}
-
-
-.large-icon {
-    text-align: center;
-    color: #660012;
-    font-size: 2.5em;
-    margin-bottom: .25em;
 }
 
 .title {
@@ -426,25 +80,138 @@ p.intro {
     color: #3b3b3b;
 }
 
-/*--------------------------------------------------------  Buttons */
+/*--------------------------------------------------------   Buttons */
+.btn-primary {
+    background-color: #4a148c;
+    border-color: #4a148c;
+}
 
-.btn-book {
+.btn-primary:hover {
+    background-color: #aa00ff;
+    border-color: #aa00ff;
+}
+
+.btn-primary-2 {
+    background-color: #4a148c;
+    border-color: #4a148c;
     color: #fff;
-    background-color: #660012;
-    border-color: #48000d;
-    font-family: 'Lexend Peta', sans-serif;
+}
+
+.btn-primary-2:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #4a148c;
+}
+
+.btn-small {
+    margin:4px;
+}
+
+.purple-button {
+    color: #aa00ff;
+}
+
+
+/*--------------------------------------------------------   Text */
+.mono {
+    font-family: 'PT Mono', monospace;
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+
+.title-purple {
+    color: #4a148c;
+}
+
+.title-white {
+    color: #fff;
+}
+
+.headline {
+    margin: 1rem 0 1rem;
+    font-weight: 800;
+}
+
+.headline-1 {
+    margin: 1rem 0 1rem;
+    font-weight: 800;
+    font-size: 72px;
+}
+
+@media only screen and (max-width: 480px) {
+.headline-1 {
+    margin: 1rem 0 1rem;
+    font-weight: 800;
+    font-size: 55px;
+}
+}
+
+.headline-2 {
+    margin: 1rem 0 1rem;
+    font-weight: 800;
+    font-size: 40px;
+
+}
+
+.flashed h5 {
+    padding: 0.5em;
+    line-height: 1.2;
+    font-size: 1.6em;
     text-transform: uppercase;
-    font-size: 0.85em;
+    letter-spacing: 0.25em;
+    color: #aa00ff ;
+    text-align: center!important;
 }
 
-.btn-book:hover, .btn-book:focus, .btn-book:active, .btn-book.active, .open>.dropdown-toggle.btn-book {
-    color: rgb(248, 18, 60);
+.bb-title {
+    text-transform: uppercase;
+    font-size: 1.75em;
+    text-align: center;
+    font-weight: 800;
+    width: -webkit-fill-available;
 }
 
-/*--------------------------------------------------------  Logo */
-.logo {    
-    border: 1px solid grey;
+.bb-title-left {
+    text-transform: uppercase;
+    font-size: 1.75em;
+    text-align: left;
+    font-weight: 800;
+    width: -webkit-fill-available;
 }
+
+@media only screen and (max-width: 540px) {
+.bb-title {
+    font-size: 1.3em;
+}
+}
+
+@media only screen and (max-width: 450px) {
+.bb-title {
+    font-size: 1.1em;
+}
+}
+
+.build-title {
+    font-family: 'Anton', sans-serif;
+    line-height: 1.5;
+}
+
+.collapsible-header .col .strong {
+    margin: 4px;
+    line-height: 40px;
+}
+
+.genre-text {
+    text-transform: uppercase;
+    text-decoration-line: underline;
+}
+
+/*--------------------------------------------------------  Navigation */
+
+.nav {
+  background-color: #ffffff !important;
+}
+
 
 /*--------------------------------------------------------  Menu */
 /* - Bootstrap Navbar code was used and modified for navbar https://getbootstrap.com/docs/4.0/components/navbar/
@@ -503,58 +270,140 @@ p.intro {
     border-color: rgba(102, 10, 18, .9);
 }
 
-/*--------------------------------------------------------  Home */
-.hero-image {
-    background: url("../images/akragas-panorama.jpg");
-    background-position: center;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 420px;
+/*--------------------------------------------------------  Elements */
+
+hr.purple-bold {
+    border: 1px solid #4a148c;
+    margin-top: 0.5em;
 }
 
-.intro2 {
-    margin-bottom: 3.6rem;
+hr.purple-light {
+    border: 1px solid #4a148c;
 }
 
-@media only screen and (max-width: 1800px) {
-    .intro2 {
-        margin-bottom: 3rem;
-    }
-}       
+hr.purple-thin {
+    border: 0.1em solid #4a148c;
+    margin-top: 0.25em;
 
-@media only screen and (max-width: 1300px) {
-    .intro2 {
-        margin-bottom: 2rem;
-    }
 }
 
-@media only screen and (max-width: 900px) {
-    .intro2 {
-        margin-bottom: 2rem;
-    }
+.white-box {
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
 }
 
-@media only screen and (max-width: 778px) {
-    .intro1 {
-        font-size: 1.5rem;
-        }
-    .intro2 {
-        font-size: 1.3rem;
-        margin-bottom: .75rem;
-    }
+.icon-space {
+    padding-bottom: 0.5em;
 }
 
-@media only screen and (max-width: 480px) {
-    .intro1 {
-        font-size: 1.4rem;
-    }
+.border-solid {
+    border-style: solid;
+    border-color:#aa00ff;
+    border-width: 0.1em;
+    line-height: 2em;
 }
 
 
 
-/*--------------------------------------------------------  Contact */
-/*-- Contact Form - modified code used in Code Institute UCD Resume project https://github.com/charliekranz/UCD-resume */
+.box-text {
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    color: #aa00ff;
+    font-size: 1.75em;
+    font-weight: 800;
+    line-height: 1em;
+    padding: 16px 4px 16px 4px;
+}
+
+.img-pad-left {
+    padding-left: 10px;
+}
+
+/*--------------------------------------------------------   Cast Images * found very helpful demo for the inline fix*/
+.cast-images > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cast-label {
+    line-height: 1.2em;
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+    color: #636363;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+
+.cast-label-display {
+    line-height: 1.2em;
+    font-size: 1.1em;
+    padding-bottom: 0.5em;
+    color: #636363;
+    text-align: left;
+}
+
+/*--------------------------------------------------------   Dropdowns */
+
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+.dropdown-content {
+    white-space: normal;
+}
+
+
+/*--------------------------------------------------------   Cards  */
+
+.card-padding {
+    padding: 1.5em;
+}
+
+.build-card {
+    background-color: #f1f1f1;
+}
+
+.edit-card {
+    background-color: #cde4f1 ;
+}
+
+.bb-card {
+    background-color: #e3e6f5;
+}
+
+.card-header{
+    background-color: #aa00ff;
+}
+
+
+
+/*--------------------------------------------------------  General */
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex-container {
+    display: flex;
+}
+
+div.inline { 
+    float:left;
+}
+
+.clearBoth {
+    clear:both;
+}
+
+
+/*--------------------------------------------------------  Form */
+
 .contact {
     color: #efefef; 
     background-color: #0A4B66;
@@ -573,7 +422,6 @@ p.intro {
 .form-box {
     padding: 24px 10px 10px 10px;
 }
-
 
 button, input, optgroup, select, textarea {
     margin: 5px;
@@ -600,27 +448,6 @@ button, input, optgroup, select, textarea {
     padding-top: 0.25em;
 }
 
-.icon-row {
-    margin: 10px;
-}
-
-.icon-row-small {
-    min-height: 5em;
-}
-
-@media only screen and (max-width: 700px) {
-    .icon-row {
-        margin: 10px;
-    }
-}
-
-.icon-row a {
-    color: #fff;
-}
-
-.icon-row a:hover {
-    color: #73aecf;;
-}
 
 .fa-resize {
     font-size: 4.25em;
@@ -674,38 +501,7 @@ button, input, optgroup, select, textarea {
     color: #e1a6ff;
 }
 
-.footer-menu {
-    margin-top: 10px;
-}
-
-.footer-menu a {
-    text-align: center;
-    text-transform: uppercase;
-    color: #c6babc;
-}
-
-.footer-menu a:hover {
-    text-align: center;
-    text-transform: uppercase;
-    color: #f8123c;
-    text-decoration: none;
-}
-
-.footer-menu p {
-    margin-top: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #c6babc;
-}
-
-.form-control {
-    font-size: 1.25em;
-    color: #4a148c;
-}
-
-@media only screen and (max-width: 540px) {
-.form-control {
-    font-size: .8em;
-
-}
+.footer-content {
+    height: 100vh;
+    background-color: #4a148c;
 }
