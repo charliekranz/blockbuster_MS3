@@ -233,16 +233,13 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
 - The selected casts weren't appearing as selected in the edit template. Using cast-checkbox class on edit template so that the selected cast appear chosen (thanks to Ronan for spotting that in particular)
 
-- Edit template Updates were not sending cast selection changes. Changed Edit App Route from "cast_members": request.form.getlist("cast_members") to "cast_members": cast_members as request.form did not apply in tghis case. (Thanks to Ronan for spotting this)
+- Edit template Updates were not sending cast selection changes. Changed Edit App Route from "cast_members": request.form.getlist("cast_members") to "cast_members": cast_members as request.form did not apply in this case. (Thanks to Ronan for spotting this)
 
 - Caught missing else condition in edit_story.html which as preventing the Genre selection from properly displaying on edit.
 
 ### Unfixed Bugs 
 
 - Register function delays after username chosen before password field can be accessed when using Safari for iOS
-
-
-## Deployment (Yet to finish)
 
 # Deployment
 
