@@ -191,7 +191,7 @@ fancybox
 ### Validator Testing (Yet to finish)
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator]()
+  - No fatal errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fblockbuster-charliekranz.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - JS 
@@ -203,7 +203,7 @@ fancybox
 
 ### Unfixed Bugs  (Yet to finish)
 
-- Heroku delay on register for iOS?
+- Heroku delay on register when using Safari for iOS?
 
 
 ## Deployment (Yet to finish)
