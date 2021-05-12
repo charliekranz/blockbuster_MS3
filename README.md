@@ -1,5 +1,5 @@
 
-<img src="https://github.com/charliekranz/blockbuster_MS3/blob/b4801074ca3319ae60fc6d98ba0ce833c1743256/static/MS3-project-files/home.jpg">
+<img src="https://blockbuster-charliekranz.herokuapp.com/static/MS3-project-files/home.jpg">
 
 # Block+Buster+Builder
 
@@ -50,7 +50,7 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
     - Sans Serif for body and smaller text
 
 
-## Features  (Yet to finish)
+## Features
 
 ### Existing Features
 
@@ -85,7 +85,7 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
   - TBC 
   - TBC  
 
-<img src="https://charliekranz.github.io/blockbuster_MS3/static/MS3-project-files/static/MS3-project-files/build.jpg">
+<img src="https://blockbuster-charliekranz.herokuapp.com/static/MS3-project-files/build.jpg">
 
 
 - __Edit Page__
@@ -142,7 +142,6 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 - Might allow for longer titles and force linebreak/wrap if no space before end of BB accordion
 
 
-
 ## Technologies used 
 
 * HTML and CSS programming languages
@@ -153,34 +152,41 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 * [Bootstrap](https://getbootstrap.com/) - responsive sourcetoolkit with components and Javascipt plugins
 * [fontawesome](https://fontawesome.com/v4.7.0/) - vector icons customisable through CSS
 * [Google Fonts](https://fonts.google.com/) - open source web font collection
-* [Google Places API](https://cloud.google.com/maps-platform/places/) - to access and retrieve results data from Google's millions of Place Locations
-* [Google Maps API](http://cloud.google.com/maps-platform/) - to display map
-* [Google Developer](https://console.developers.google.com/) - to access Google APIs
 * [jQuery](https://jquery.com/) - add state to button
+* [MongoDB](https://www.mongodb.com/) - database and collections
+* [Heroku](https://dashboard.heroku.com/apps) - Cloud Applications
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) - web application library
+* [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - templating engine
 
-mongoDB
-heroku
-materialise
-jquery
-fontawesome
-werkzeug
-Jinga
-using hover (akragas)
-popper and slim min
-fancybox
+## Testing 
 
 
+- Navbar
+    - Tested that navigation links linked to appropriate pages
+    - Tested that nav links which should be visible were visible
+    - Tested that nav links which should be hidden were hidden
 
-## Testing  (Yet to finish)
+- Homepage
+    - Tested that buttons which should be visible were visible
+    - Tested that buttons which should be hidden were hidden
 
-- Accordion on blockbusters page were initially unable to target stories properly. Titles with spaces and/or a number at the start of title_name caused issues. Fixed by using ObjectId instead and adding a character to the start (BB).
+- Register
+    - Tested that Registrations were confined to the appropriate restrictions
+    - Those restrictions being alpha/numeric characers only, and following the min-max count 
 
-- The selected casts weren't appearing as selected in the edit template. Using cast-checkbox class on edit template so that the selected cast appear chosen (thanks to Ronan for spotting that in particular)
+- Login 
+    - Tested that Login always functioned properly, allowing only valid logins
 
-- Edit template Updates were not sending cast selection changes. Changed Edit App Route from "cast_members": request.form.getlist("cast_members") to "cast_members": cast_members as request.form did not apply in tghis case. (Thanks to Ronan for spotting this)
+- Logout 
+    - Tested that logout always successfully logged-out users
 
-- Caught missing else condition in edit_story.html which as preventing the Genre selection from properly displaying on edit.
-
+- Build
+    - Tested that all appropriate restrictions were enforced, namely
+        - Stories must have all 4 parts selected
+        - Radomization worked across all 4 story parts
+        - Titles had to be eneterd with min/max values obeyed
+        - A Genre had to be explicitly chosen
+        - At least 
 
 ## TESTED on the Following:
     * Responsive devices on Google Developer Tools
@@ -200,6 +206,15 @@ fancybox
    - App.py is PEP8 compliant [Pep8 online](http://pep8online.com/)
 
 
+## Debugging
+
+- Accordion on blockbusters page were initially unable to target stories properly. Titles with spaces and/or a number at the start of title_name caused issues. Fixed by using ObjectId instead and adding a character to the start (BB).
+
+- The selected casts weren't appearing as selected in the edit template. Using cast-checkbox class on edit template so that the selected cast appear chosen (thanks to Ronan for spotting that in particular)
+
+- Edit template Updates were not sending cast selection changes. Changed Edit App Route from "cast_members": request.form.getlist("cast_members") to "cast_members": cast_members as request.form did not apply in tghis case. (Thanks to Ronan for spotting this)
+
+- Caught missing else condition in edit_story.html which as preventing the Genre selection from properly displaying on edit.
 
 ### Unfixed Bugs  (Yet to finish)
 
