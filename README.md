@@ -182,7 +182,7 @@ fancybox
 - Caught missing else condition in edit_story.html which as preventing the Genre selection from properly displaying on edit.
 
 
-## TESTED on the Following: (Yet to finish)
+## TESTED on the Following:
     * Responsive devices on Google Developer Tools
     * iPhone 7, iPad Pro
     * OSX Browsers: Chrome, Safari
@@ -197,7 +197,7 @@ fancybox
 - JS 
    - JS validated but flags undefined and unused variables. All variables are defined and used so have ignored [https://jshint.com/](https://jshint.com/)
 - Python
-   - Some lines need to be shortened [Pep8 online](http://pep8online.com/)
+   - App.py is PEP8 compliant [Pep8 online](http://pep8online.com/)
 
 
 

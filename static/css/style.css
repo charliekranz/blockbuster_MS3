@@ -491,7 +491,7 @@ button, input, optgroup, select, textarea {
 
 /*--------------------------------------------------------  Footer */
 
-.footer {
+.footer-main {
     height: 100px;
     min-height: 200px;
     background-color: #4a148c;
