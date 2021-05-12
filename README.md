@@ -64,68 +64,33 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
 - __Home Page__
 
-  - TBC 
-  - TBC 
+  - The Homepage established the basic concept of Block+Buster+Builder
+  - It allows user to Browse current content or to Build their own (after login/registration)
 
 
 - __Browse Page__
 
-  - TBC 
-  - TBC  
+  - Displays all current Block+Buster Content 
+  - Allows user to search by Title, Story or Cast 
 
 
 - __MyBB Page__
 
-  - TBC 
-  - TBC  
+  - Displays all user's own current Block+Buster Content  
 
 
 - __Build Page__
 
-  - TBC 
-  - TBC  
+  - Allows user to create Block+Busters 
+  - In particular the Randomize Story Feature is a key fun aspect
 
 <img src="https://blockbuster-charliekranz.herokuapp.com/static/MS3-project-files/build.jpg">
 
 
 - __Edit Page__
 
-  - TBC 
-  - TBC 
-
-
-- __Login Page__
-
-  - TBC 
-  - TBC  
-
-
-- __Logout Page__
-
-  - TBC 
-  - TBC  
-
-
-- __Register Page__
-
-  - TBC 
-  - TBC  
-
-
-- __About Page__
-
-  - TBC 
-  - TBC  
-
-
-- __Modals__
-
-    -
-
-- __Footer__
-
-  - TBC 
-  - TBC 
+  - Allows user to edit any aspect of their Block+Buster Content
+  - Allows User to Delete their Content entirely 
 
 
 ### Features Left to Implement
@@ -289,7 +254,7 @@ pip -r requirements.txt.
 
 6. In your local IDE create a file called `.flaskenv`.
 
-7. Inside the .flaskenv file, create a SECRET_KEY variable and a MONGO_URI to link to your own database. Please make sure to call your database `block_buster`, with 10 collections called `cast` `character` `genres` `plot` `resolution` `setting` `stories` `storyblocks` `titles` and `users`. You will find example json structures for these collections in the [schemas](familyhubapp/data/schemas) folder.
+7. Inside the .flaskenv file, create a SECRET_KEY variable and a MONGO_URI to link to your own database. Please make sure to call your database `block_buster`, with 10 collections called `cast` `character` `genres` `plot` `resolution` `setting` `stories` `storyblocks` `titles` and `users`. 
 
 8. You can now run the application with the command
 ```
@@ -348,37 +313,46 @@ SECRET_KEY | `<your_secret_key>`
 - Getlist fix (partial ) found at https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
 
 
+### Acknowledgelments
+* My mentor Ignatius provided some very valuable planning insight, in particular with regard to setting-up my collections
+* My mentor Chris provided excellent insight and encouragement at the mid and finalisation steps
+* My friend Ronan offered real insight and suggestions on implementing code across both Python and Javascript
+
+
 ### Media
+Images of actors were mostly pulled from Wikipedia.. All links included below.
+- Charlize Theron https://en.wikipedia.org/wiki/Charlize_Theron#/media/File:Charlize-theron-IMG_6045.jpg
+- Judi Dench - https://en.wikipedia.org/wiki/Judi_Dench#/media/File:Judi_Dench_at_the_BAFTAs_2007_(cropped).jpg
+- Tilda Swinton - https://en.wikipedia.org/wiki/Tilda_Swinton#/media/File:Tilda_Swinton_by_Gage_Skidmore_(cropped).jpg
+- Sandra Oh - https://m.media-amazon.com/images/M/MV5BMTMyNzYyNDE4MV5BMl5BanBnXkFtZTcwOTkxMDQ2NA@@._V1_.jpg
+- Dwayne Johnson https://en.wikipedia.org/wiki/Dwayne_Johnson#/media/File:Dwayne_Johnson_Hercules_2014_(cropped).jpg
+- Jackie Chan - https://upload.wikimedia.org/wikipedia/commons/8/8b/Jackie_Chan_July_2016.jpg
+- Will Smith https://en.wikipedia.org/wiki/Will_Smith#/media/File:TechCrunch_Disrupt_2019_(48834434641)_(cropped).jpg
+- Lin-Manuel Miranda https://en.wikipedia.org/wiki/Lin-Manuel_Miranda#/media/File:Lin-Manuel_Miranda_by_Gage_Skidmore.jpg
+- Samuel L. Jackson https://en.wikipedia.org/wiki/Samuel_L._Jackson#/media/File:Samuel_L._Jackson_2019_by_Glenn_Francis.jpg
+- Viola Davis - https://en.wikipedia.org/wiki/Viola_Davis#/media/File:Viola_Davis_by_Gage_Skidmore.jpg
+- Meryl Streep - https://en.wikipedia.org/wiki/Meryl_Streep#/media/File:Meryl_Streep_December_2018.jpg
+- Melissa McCarthy - https://en.wikipedia.org/wiki/Melissa_McCarthy#/media/File:Melissa_McCarthy_in_2018_(cropped).jpg
+- Elliot Page - https://media.vanityfair.com/photos/60884831301e0fee4a0c978d/master/w_2560%2Cc_limit/elliot-page-interview-lede.jpg
+- Denzel Washington - https://www.thextraordinary.org/media/k2/items/cache/2e2c1711fe12b24ae23d95c35bfd21c2_L.jpg
+- Leonardo DiCaprio - https://media.vanityfair.com/photos/60255707b9f9b86e12a6600a/2:3/w_2185,h_3278,c_limit/1205143953
+- Amy Adams - https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Amy_Adams_UK_Nocturnal_Animals_Premiere_%28cropped%29.jpg/440px-Amy_Adams_UK_Nocturnal_Animals_Premiere_%28cropped%29.jpg
+- Joaquin Phoenix - https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Joaquin_Phoenix_at_the_2018_Berlin_Film_Festival.jpg/440px-Joaquin_Phoenix_at_the_2018_Berlin_Film_Festival.jpg
+- Ryan Gosling - https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ryan_Gosling_in_2018.jpg/440px-Ryan_Gosling_in_2018.jpg
+- Emma Stone - https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_%28cropped%29.jpg/440px-Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_%28cropped%29.jpg
+- Saoirse Ronan - https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Saoirse_Ronan_at_BAFTA_2016_%281%29_%28cropped%29.jpg/440px-Saoirse_Ronan_at_BAFTA_2016_%281%29_%28cropped%29.jpg 
+- Idris Elba - https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Idris_Elba-4580_%28cropped%29.jpg/440px-Idris_Elba-4580_%28cropped%29.jpg
+- Michael B. Jordan - https://en.wikipedia.org/wiki/Michael_B._Jordan
+- Ralph Fiennes - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg/440px-Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg
+- Margot Robbie - https://en.wikipedia.org/wiki/Margot_Robbie_filmography
+- Letitia Wright - https://en.wikipedia.org/wiki/Letitia_Wright
+- Peter Dinklage - https://media.newyorker.com/photos/5de59f9310863b0009e9d541/2:2/w_2178,h_2178,c_limit/Schulman-PeterDinklage.jpg
+- Catherine Keener - https://m.media-amazon.com/images/M/MV5BMjIwMzQ1Mzg1MF5BMl5BanBnXkFtZTcwNTE4MTU5MQ@@._V1_.jpg 
+- Regina King - https://media.vanityfair.com/photos/5c61e52f50f462477e50ddb6/2:3/w_1332,h_1998,c_limit/t-regina-king-cover-oscar-issue.png
+- Steve Buscemi - https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Steve_Buscemi_crop.jpg/440px-Steve_Buscemi_crop.jpg
+- Cate Blanchett - https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cate_Blanchett_Cannes_2018_2_%28cropped%29.jpg/
 
-Charlize Theron  - https://en.wikipedia.org/wiki/Charlize_Theron#/media/File:Charlize-theron-IMG_6045.jpg
-Judi Dench - https://en.wikipedia.org/wiki/Judi_Dench#/media/File:Judi_Dench_at_the_BAFTAs_2007_(cropped).jpg
-Tilda Swinton - https://en.wikipedia.org/wiki/Tilda_Swinton#/media/File:Tilda_Swinton_by_Gage_Skidmore_(cropped).jpg
-Sandrah Oh - https://m.media-amazon.com/images/M/MV5BMTMyNzYyNDE4MV5BMl5BanBnXkFtZTcwOTkxMDQ2NA@@._V1_.jpg
 
-Dwayne - Johnson - <a href="https://en.wikipedia.org/wiki/Dwayne_Johnson#/media/File:Dwayne_Johnson_Hercules_2014_(cropped).jpg target="_blank">
-Jackie Chan - <a href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Jackie_Chan_July_2016.jpg target="_blank">
-Will Smith - <a href="https://en.wikipedia.org/wiki/Will_Smith#/media/File:TechCrunch_Disrupt_2019_(48834434641)_(cropped).jpg target="_blank">
-Lin-Manuel Miranda - <a href="https://en.wikipedia.org/wiki/Lin-Manuel_Miranda#/media/File:Lin-Manuel_Miranda_by_Gage_Skidmore.jpg target="_blank">
-Samuel L. Jackson - <a href="https://en.wikipedia.org/wiki/Samuel_L._Jackson#/media/File:Samuel_L._Jackson_2019_by_Glenn_Francis.jpg target="_blank">
-Viola Davis - <a href="https://en.wikipedia.org/wiki/Viola_Davis#/media/File:Viola_Davis_by_Gage_Skidmore.jpg target="_blank">
-Meryl Streep - <a href="https://en.wikipedia.org/wiki/Meryl_Streep#/media/File:Meryl_Streep_December_2018.jpg target="_blank">
-Melissa McCarthy - <a href="https://en.wikipedia.org/wiki/Melissa_McCarthy#/media/File:Melissa_McCarthy_in_2018_(cropped).jpg target="_blank">
-Elliot Page - <a href="https://media.vanityfair.com/photos/60884831301e0fee4a0c978d/master/w_2560%2Cc_limit/elliot-page-interview-lede.jpg target="_blank">
-Denzel Washington - <a href="https://www.thextraordinary.org/media/k2/items/cache/2e2c1711fe12b24ae23d95c35bfd21c2_L.jpg target="_blank">
-Leonardo DiCaprio - <a href="https://media.vanityfair.com/photos/60255707b9f9b86e12a6600a/2:3/w_2185,h_3278,c_limit/1205143953" target="_blank">
-Amy Adams - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Amy_Adams_UK_Nocturnal_Animals_Premiere_%28cropped%29.jpg/440px-Amy_Adams_UK_Nocturnal_Animals_Premiere_%28cropped%29.jpg target="_blank">
-Joaquin Phoenix - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Joaquin_Phoenix_at_the_2018_Berlin_Film_Festival.jpg/440px-Joaquin_Phoenix_at_the_2018_Berlin_Film_Festival.jpg target="_blank">
-Ryan Gosling - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ryan_Gosling_in_2018.jpg/440px-Ryan_Gosling_in_2018.jpg
-Emma Stone - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_%28cropped%29.jpg/440px-Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_%28cropped%29.jpg
-Saoirse Ronan - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Saoirse_Ronan_at_BAFTA_2016_%281%29_%28cropped%29.jpg/440px-Saoirse_Ronan_at_BAFTA_2016_%281%29_%28cropped%29.jpg target="_blank">
-Idris Elba - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Idris_Elba-4580_%28cropped%29.jpg/440px-Idris_Elba-4580_%28cropped%29.jpg target="_blank">
-Michael B. Jordan - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/2018-05-12-_Cannes-L%27acteur_Michael_B._Jordan-2721_%2842075892224%29.jpg/440px-2018-05-12-_Cannes-L%27acteur_Michael_B._Jordan-2721_%2842075892224%29.jpg target="_blank">
-Ralph Fiennes - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg/440px-Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg target="_blank">
-Margot Robbie - <a href="https://upload.wikimedia.org/wikipedia/commons/5/57/SYDNEY%2C_AUSTRALIA_-_JANUARY_23_Margot_Robbie_arrives_at_the_Australian_Premiere_of_%27I%2C_Tonya%27_on_January_23%2C_2018_in_Sydney%2C_Australia_%2828074883999%29_%28cropped_2%29.jpg target="_blank">
-Letitia Wright - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Letitia_Wright_by_Gage_Skidmore.jpg/ target="_blank">440px-Letitia_Wright_by_Gage_Skidmore.jpg target="_blank">
-Peter Dinklage - <a href="https://media.newyorker.com/photos/5de59f9310863b0009e9d541/2:2/w_2178,h_2178,c_limit/Schulman-PeterDinklage.jpg target="_blank">
-Catherine Keener - <a href="https://m.media-amazon.com/images/M/MV5BMjIwMzQ1Mzg1MF5BMl5BanBnXkFtZTcwNTE4MTU5MQ@@._V1_.jpg target="_blank">
-Regina King - <a href="https://media.vanityfair.com/photos/5c61e52f50f462477e50ddb6/2:3/w_1332,h_1998,c_limit/t-regina-king-cover-oscar-issue.png target="_blank">
-Steve Buscemi - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Steve_Buscemi_crop.jpg/440px-Steve_Buscemi_crop.jpg target="_blank">
-Cate Blanchett - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cate_Blanchett_Cannes_2018_2_%28cropped%29.jpg/ 440px-Cate_Blanchett_Cannes_2018_2_%28cropped%29.jpg target="_blank">
+### Disclaimer
+This website was created for educational purposes only. 
 
