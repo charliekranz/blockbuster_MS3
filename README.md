@@ -1,7 +1,5 @@
 
-Rememmber to turn Debug to false
-
-![Mockup](url)
+<img src="https://github.com/charliekranz/blockbuster_MS3/blob/b4801074ca3319ae60fc6d98ba0ce833c1743256/static/MS3-project-files/home.jpg">
 
 # Block+Buster+Builder
 
@@ -86,6 +84,8 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
   - TBC 
   - TBC  
+
+<img src="https://charliekranz.github.io/blockbuster_MS3/static/MS3-project-files/static/MS3-project-files/build.jpg">
 
 
 - __Edit Page__
