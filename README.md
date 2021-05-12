@@ -26,7 +26,10 @@ And if you get writer's block - simply  Randomize your Story Choices!
 - #### Frequent User Goals
     1. As a Frequent User, I want to be able to refer others to the website and encourage them to create Block+Busters.
 
-static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
+
+
+- #### Wireframes
+    - Wireframes: [View](https://blockbuster-charliekranz.herokuapp.com/static/MS3-project-files/MS3-wireframes-CharlieKranz-Block+Buster.pdf)
 
 ## Design
 
@@ -313,7 +316,7 @@ SECRET_KEY | `<your_secret_key>`
 - Getlist fix (partial ) found at https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
 
 
-### Acknowledgelments
+### Acknowledgements
 * My mentor Ignatius provided some very valuable planning insight, in particular with regard to setting-up my collections
 * My mentor Chris provided excellent insight and encouragement at the mid and finalisation steps
 * My friend Ronan offered real insight and suggestions on implementing code across both Python and Javascript
