@@ -11,10 +11,8 @@
                     <div class="input-field ">
                         <input type="text" name="query" id="query" minlength="2" class="validate form-control" placeholder="Search Block+Busters" required>
                              <i class="fas fa-search prefix purple-text "></i> 
-                            <label for="query">
-                                <h6 class="tiny-text">
+                            <label for="query" class="tiny-text">
                                 <em>Search by Title, Story or Cast</em>
-                                </h6>
                             </label>
                     </div>
                 </div>
@@ -35,7 +33,7 @@
         {% for story in stories %}
         <div class="container-fluid pt-1">
             <div class="row card">
-                <div class="card-header bb-title" id="" >
+                <div class="card-header bb-title">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#BB{{ story._id }}" aria-expanded="true" aria-controls="BB{{ story._id  }}">
                         <h3 class="bb-title title-white"><i class="fas fa-ticket-alt purple-text fa-lg"></i>&nbsp;
                             {{ story.title_name }}</h3>
@@ -53,8 +51,8 @@
                         <div class="row">
                             <div class="col-12 col-lg-7">
                                 <h4 class="bb-title-left purple-text">{{ story.title_name }}</h4>
-                                <strong><em><h6 class="genre-text purple-text"></em>
-                                {{ story.genre_name }}</h6></br>
+                                <strong><em><h6 class="genre-text purple-text">
+                                {{ story.genre_name }}</h6></em></br>
                                 <h5>{{ story.character_name }} {{ story.plot_name }} {{ story.resolution_name }} {{ story.setting_name }}</h5> 
                                 </strong>
                                 <p><em>by: {{ story.created_by }}</em></p>
