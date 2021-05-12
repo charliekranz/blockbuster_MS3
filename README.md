@@ -3,7 +3,7 @@
 
 # Block+Buster+Builder
 
-The Block+Buster+Builder seeks to give you all the fun of being a Movie Mogul with none of the hassle, legal costs or need for negotiations. Simply Build your Story using the Block+Buster Building Blocks, Title the Project, declare your Genre and then Cast your Masterpiece with some of the best talent in the business!
+Block+Buster+Builder seeks to give you all the fun of being a Movie Mogul with none of the hassle, legal costs or need for negotiations. Simply Build your Story using the Block+Buster Building Blocks, Title the Project, declare your Genre and then Cast your Masterpiece with some of the best talent in the business!
 And if you get writer's block - simply  Randomize your Story Choices!
 
 ***
@@ -163,12 +163,12 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
 - Navbar
     - Tested that navigation links linked to appropriate pages
-    - Tested that nav links which should be visible were visible
-    - Tested that nav links which should be hidden were hidden
+    - Tested that nav links which should be visible were visible based on user session state
+    - Tested that nav links which should be hidden were hidden based on user session state
 
 - Homepage
-    - Tested that buttons which should be visible were visible
-    - Tested that buttons which should be hidden were hidden
+    - Tested that buttons which should be visible were visible based on user session state
+    - Tested that buttons which should be hidden were hidden based on user session state
 
 - Register
     - Tested that Registrations were confined to the appropriate restrictions
@@ -183,13 +183,13 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 - Build
     - Tested that all appropriate restrictions were enforced, namely
         - Stories must have all 4 parts selected
-        - Radomization worked across all 4 story parts
-        - Titles had to be eneterd with min/max values obeyed
+        - Randomization worked across all 4 story parts
+        - Titles had to be eneterd with strict min/max values
         - A Genre had to be explicitly chosen
         - Cast had to have at least one person and no more than 3
-    - If any of the above conditions were nit met, tested that the approprite prompt appeared
+    - If any of the above conditions were not met, tested that the approprite prompt appeared
         - Prompts included Modals for Min/Max cast
-    - Tested that Publish did save to database
+    - Tested that Publish button did correctly save to database
 
 - Edit 
     - Tested that all the same Build functions were present as well as:
@@ -201,6 +201,9 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
     - Tested that Blockbusters from database did populate the Browse page
     - Tested that Blockbusters did appear in accordion card when clicked
     - Tested Search function for all indexes
+
+- MyBB 
+    - Tested that all user's own BlockBusters (and only theirs) were displayed
 
 - About 
     - Tested that links to amazon.co.uk worked 
@@ -241,33 +244,119 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
 ## Deployment (Yet to finish)
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
+# Deployment
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+## How to run this project locally
 
-The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html 
+To run this project on your own IDE follow the instructions below:
+
+Ensure you have the following tools: 
+- An IDE such as [Visual Studio Code](https://code.visualstudio.com/)
+
+The following **must be installed** on your machine:
+- [PIP](https://pip.pypa.io/en/stable/installing/)
+- [Python 3](https://www.python.org/downloads/)
+- [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+- An account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) or MongoDB running locally on your machine. 
+    - How to set up your Mongo Atlas account [here](https://docs.atlas.mongodb.com/).
+
+### Instructions
+1. Save a copy of the github repository located at https://github.com/charliekranz/blockbuster_MS3 by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command.
+```
+git clone https://github.com/charliekranz/blockbuster_MS3
+```
+
+2. If possible open a terminal session in the unzip folder or cd to the correct location.
+
+3. A virtual environment is recommended for the Python interpreter, I recommend using Pythons built in virtual environment. Enter the command:
+```
+python -m .venv venv
+```  
+_NOTE: Your Python command may differ, such as python3 or py_
+
+4. Activate the .venv with the command:
+```
+.venv\Scripts\activate 
+```
+_Again this **command may differ depending on your operating system**, please check the [Python Documentation on virtual environments](https://docs.python.org/3/library/venv.html) for further instructions._
+
+4. If needed, Upgrade pip locally with
+```
+pip install --upgrade pip.
+```
+
+5. Install all required modules with the command 
+```
+pip -r requirements.txt.
+```
+
+6. In your local IDE create a file called `.flaskenv`.
+
+7. Inside the .flaskenv file, create a SECRET_KEY variable and a MONGO_URI to link to your own database. Please make sure to call your database `block_buster`, with 10 collections called `cast` `character` `genres` `plot` `resolution` `setting` `stories` `storyblocks` `titles` and `users`. You will find example json structures for these collections in the [schemas](familyhubapp/data/schemas) folder.
+
+8. You can now run the application with the command
+```
+python app.py
+```
+
+9. You can visit the website at `http://127.0.0.1:5000`
+
+## Heroku Deployment
+
+To deploy Block+Buster+Builder to Heroku, take the following steps:
+
+1. Create a `requirements.txt` file using the terminal command `pip freeze > requirements.txt`.
+
+2. Create a `Procfile` with the terminal command `echo web: python app.py > Procfile`.
+
+3. `git add` and `git commit` the new requirements and Procfile and then `git push` the project to GitHub.
+
+3. Create a new app on the [Heroku website](https://dashboard.heroku.com/apps) by clicking the "New" button in your dashboard. Give it a name and set the region to Europe.
+
+4. From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+
+5. Confirm the linking of the heroku app to the correct GitHub repository.
+
+6. In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+
+7. Set the following config vars:
+
+| Key | Value |
+ --- | ---
+DEBUG | FALSE
+IP | 0.0.0.0
+MONGO_URI | `mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority`
+PORT | 5000
+SECRET_KEY | `<your_secret_key>`
+
+- To get you MONGO_URI read the MongoDB Atlas documentation [here](https://docs.atlas.mongodb.com/)
+
+8. In the heroku dashboard, click "Deploy".
+
+9. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
+
+10. The site is now successfully deployed.
 
 
-## Credits  (Yet to finish)
+
+## Credits 
 
 ### Content 
 
+- This project was based on the TaskMaster Project from Code Institute Course
+- Deployment steps taken (and modified) from AJGreaves Heroku Deployment Github Project (https://github.com/AJGreaves/familyhub/blob/master/README.md#heroku-deployment)
 - Icons used throughout the website are from [Font Awesome](https://fontawesome.com/)
-- randomize additional tweaks - https://jsfiddle.net/aqpwcoju/1/
-RandomKeygen for random [https://randomkeygen.com/]
-getlist fix partial https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
-
+- Basic Randomize code (with some of own additional tweaks) - https://jsfiddle.net/aqpwcoju/1/
+- RandomKeygen was used for random passwords https://randomkeygen.com/
+- Getlist fix (partial ) found at https://stackoverflow.com/questions/53344797/how-create-an-array-with-checkboxes-in-flask
 
 
 ### Media
 
-- <a href="https://en.wikipedia.org/wiki/Charlize_Theron#/media/File:Charlize-theron-IMG_6045.jpg" target="_blank"> Charlize Theron </a></br>
-<a href="https://en.wikipedia.org/wiki/Judi_Dench#/media/File:Judi_Dench_at_the_BAFTAs_2007_(cropped).jpg" target="_blank">Judi Dench</a></br>
-<a href="https://en.wikipedia.org/wiki/Tilda_Swinton#/media/File:Tilda_Swinton_by_Gage_Skidmore_(cropped).jpg" target="_blank">Tilda Swinton</a></br>
-<a href="https://m.media-amazon.com/images/M/MV5BMTMyNzYyNDE4MV5BMl5BanBnXkFtZTcwOTkxMDQ2NA@@._V1_.jpg" target="_blank">Sandra Oh</a></br>
+Charlize Theron  - https://en.wikipedia.org/wiki/Charlize_Theron#/media/File:Charlize-theron-IMG_6045.jpg
+Judi Dench - https://en.wikipedia.org/wiki/Judi_Dench#/media/File:Judi_Dench_at_the_BAFTAs_2007_(cropped).jpg
+Tilda Swinton - https://en.wikipedia.org/wiki/Tilda_Swinton#/media/File:Tilda_Swinton_by_Gage_Skidmore_(cropped).jpg
+Sandrah Oh - https://m.media-amazon.com/images/M/MV5BMTMyNzYyNDE4MV5BMl5BanBnXkFtZTcwOTkxMDQ2NA@@._V1_.jpg
 
 Dwayne - Johnson - <a href="https://en.wikipedia.org/wiki/Dwayne_Johnson#/media/File:Dwayne_Johnson_Hercules_2014_(cropped).jpg target="_blank">
 Jackie Chan - <a href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Jackie_Chan_July_2016.jpg target="_blank">
