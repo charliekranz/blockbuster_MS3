@@ -186,7 +186,25 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
         - Radomization worked across all 4 story parts
         - Titles had to be eneterd with min/max values obeyed
         - A Genre had to be explicitly chosen
-        - At least 
+        - Cast had to have at least one person and no more than 3
+    - If any of the above conditions were nit met, tested that the approprite prompt appeared
+        - Prompts included Modals for Min/Max cast
+    - Tested that Publish did save to database
+
+- Edit 
+    - Tested that all the same Build functions were present as well as:
+        - Cancel to reload the Blockbusters page
+        - Update to save changes to database
+        - Delete did delete Blockbuster with the defensive Modal to check before deleting
+
+- Browse
+    - Tested that Blockbusters from database did populate the Browse page
+    - Tested that Blockbusters did appear in accordion card when clicked
+    - Tested Search function for all indexes
+
+- About 
+    - Tested that links to amazon.co.uk worked 
+     
 
 ## TESTED on the Following:
     * Responsive devices on Google Developer Tools
@@ -194,7 +212,7 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
     * OSX Browsers: Chrome, Safari
 
 
-### Validator Testing (Yet to finish)
+### Validator Testing
 
 - HTML
   - No fatal errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
@@ -216,9 +234,9 @@ static/MS3-project-files/MS3-wirefarmes-CharlieKranz-Block+Buster.pdf
 
 - Caught missing else condition in edit_story.html which as preventing the Genre selection from properly displaying on edit.
 
-### Unfixed Bugs  (Yet to finish)
+### Unfixed Bugs 
 
-- Heroku delay on register when using Safari for iOS?
+- Register function delays after username chosen before password field can be accessed when using Safari for iOS
 
 
 ## Deployment (Yet to finish)
